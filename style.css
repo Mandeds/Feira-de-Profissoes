@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bungee';
+}
+body{
+     background-color: #ffffff;
+     font-size: 17pt;
+}
+h1{
+    display: flex;
+    text-wrap: wrap;
+    color: #fff;
+    text-shadow: 3px 3px 3px rgb(255, 102, 0),5px 5px 5px rgb(0, 110, 255),7px 7px 7px rgb(206, 99, 99),9px 9px 9px rgb(153, 73, 73),11px 11px 11px rgb(152, 68, 221);
+} 
+.cabeçalho{
+    background-color: #0B0638;
+    padding: 5%;
+}
+a{
+    font-family: 'Roboto';
+    color: #F4B855;
+    text-decoration: none;
+}
+#LOGO{
+    height: auto;
+    padding: 20%;
+}
