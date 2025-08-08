@@ -10,9 +10,19 @@ const Cadastro = () => {
             </div>
             <h1>CADASTRO</h1>
             <div className="principal">
-                <p>
-                    Aqui ficara a pagina de cadastro quando eu puder fazer ela ou quando alguem fizer.
-                </p>
+                <form>
+                    <div className="linha1">
+                        <label htmlFor="">Nome: </label> <input type="text" placeholder='Teste da Silva' />
+                        <label htmlFor="">Email: </label> <input type="email" placeholder='testedasilva@gmail.com' />
+                    </div>
+                    <div className="linha2">
+                        <label htmlFor="">Cidade: </label> <input type="text" placeholder='São Paulo' />
+                        <label htmlFor="">Tel: </label> <input type="number" placeholder='(99) 99999-9999' />
+                    </div>
+                    <div className="linha3"><label htmlFor="">Data Nascimento: </label> <input type="date" /></div>
+                    <br />
+                    <button>QUERO PARTICIPAR</button>
+                </form>
             </div>
 
         </div>

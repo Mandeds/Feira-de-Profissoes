@@ -1,23 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    background: #80cce1;
+    background-image: url('/src/assets/images/background.png');
+    background-size: cover;
+    background-position: center center;
     height: 100vh;
 }
 
 .container {
-
     display: flex;
     flex-direction: column;
     align-items: center;
-     
+    gap: 5rem;
 
     .botao {
-        display: block;
-        justify-content: start;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         .botao_voltar {
-            background: #000;
+            background: #444444;
             padding: 1.2rem;
-            border-radius: 25px;
+            border-radius: 15px;
             transition: .2s;
         }
     }
@@ -25,7 +29,7 @@ body {
 
     .botao_voltar:hover {
         padding: 1.3rem;
-        border-radius: 0px 0px 25px 0px;
+        border-radius: 0px 0px 15px 0px;
     }
 
     h1 {
@@ -33,8 +37,50 @@ body {
     }
 
     .principal {
-        background: #000;
+        background: #1d1d1d;
+        border-radius: 25px;
         width: 50%;
         height: 300px;
+        color: white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(56, 56, 56, 0.404);
+        backdrop-filter: blur(5px);
+        box-shadow: 11px 15px 11px rgba(0, 0, 0, 0.438);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        input {
+            padding: .2rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input:focus {
+            outline: auto;
+        }
+
+        button {
+            margin: auto;
+            border: none;
+            padding: .3rem 2rem;
+            font-weight: bolder;
+            font-size: 30pt;
+            font-family: 'Roboto', sans-serif;
+            transition: .5s;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
+        }
+
+        button:focus {
+            box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.459);
+        }
     }
 }

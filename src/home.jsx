@@ -8,7 +8,7 @@ export default function home() {
 
         <main>
             <header>
-                <img className="logo" src="" />
+                <img className="logo" src="./src/assets/images/image-removebg-preview 2.png" />
                 <strong>
                     <a href="#">INICIO</a>
                     <a href="#">SOBRE</a>
