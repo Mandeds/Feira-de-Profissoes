@@ -4,12 +4,12 @@
         background-color: #ffffff;
         font-size: 17pt;
         flex-wrap: wrap;
-        background-image: url(/background.png);
+        background-image: url('/src/assets/images/background-degrade-inicio.png');
         background-repeat: no-repeat;
     }
 
     header {
-        background-color: #0B0638F0;
+        /*background-color: #0B0638F0;*/
         display: flex;
         align-items: center;
         width: 100%;
