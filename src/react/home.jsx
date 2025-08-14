@@ -4,38 +4,29 @@ import { Link } from 'react-router';
 
 
 export default function home() {
-    return (<div>
+    return (
+        <div className="tudo">
 
-        <main>
-            <header>
-
-                <div className="alinhador">
-
-
-                    
-                </div>
-
-                <div className="texto">
-                    <h1>#VEMPROFREi</h1>
+            <main>
+                <div className="vemprofrei">
+                    <h1>#VEMPROFREI</h1>
                 </div>
 
                 <div className="links">
-                    <strong>
-                        <a href="#">INICIO</a>
-                        <a href="#">SOBRE</a>
-                        <a href="#">CONTATO</a>
-                    </strong>
+                    <strong><a href="#">INICIO</a></strong>
+                    <strong><a href="#">SOBRE</a></strong>
+                    <strong><a href="#">CONTATO</a></strong>
                 </div>
 
                 <button>
-                    <Link to={'/cadastro'}>Cadastro  </Link >
+                    <Link to={'/cadastro'}>Cadastro</Link >
                 </button>
 
-            </header>
-            <section className="pagina">
 
-            </section>
-        </main>
-    </div>
+                <section className="pagina">
+
+                </section>
+            </main>
+        </div>
     )
 }

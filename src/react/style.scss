@@ -1,85 +1,47 @@
-@media screen and (min-width: 1024px), (max-width: 1444px)  {
+@media screen and (min-width: 1024px), (max-width: 1444px) {
 
-    body {
-        background-color: #ffffff;
-        font-size: 17pt;
-        flex-wrap: wrap;
-        background-image: url('/src/assets/images/background-degrade-inicio.png');
+    .tudo {
         background-repeat: no-repeat;
-    }
-
-    header {
-        /*background-color: #0B0638F0;*/
-        display: flex;
-        align-items: center;
+        padding: 5vh;
+        background-image: url('src/assets/images/background-degrade-inicio.png');
         width: 100%;
-        height: 150px;
-        position: fixed;
-        padding: 2vh;
-
-    }
-    
-    header > strong {
-        display: flex;
-        justify-content: space-around;
-        width: 550px;
-        margin-left: 20%;
-        font-family: "Roboto";
-    }
-
-    strong > a:hover{
-        text-decoration: underline;
-    }
-
-    a {
-        font-family: 'Roboto';
-        color: #F4B855;
-        text-decoration: none;
-    }
-
-    header > button {
-        width: 90px;
-        font-size: 17px;
-        position: relative;
-        left: 10%;
-        height: 37px;
-        border-radius: 40px;
-    }
-
-    .pagina {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-
-    .freifotinha {  
-        height: 20vh;
-        width: 20vh;
-        position: relative;
-        left: 29%;
-        top: 80px;
-    }
-    
-    .texto {
-        display: flex;
-        margin-right: 20vh;
-        align-items: center;
-        justify-content: center;
-        background-color: #364FDA;
-        width: 80vh;
-        height: 13vh;
-        border-radius: 45px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-
-            h1 {
-                color: #fff;
-                text-shadow: 3px 3px 3px rgb(255, 102, 0), 5px 5px 5px rgb(0, 110, 255), 7px 7px 7px rgb(206, 99, 99), 9px 9px 9px rgb(153, 73, 73), 11px 11px 11px rgb(152, 68, 221);
-                font-family: "Bungee";
-                font-size: 37px;
+        height: 300vh;
+        
+        
+        .vemprofrei {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8vh;
+                margin-left: 15vh;
+                background-color: #364FDA;
+                width: 45vh;
+                height: 9.8vh;
+                font-size: large;
+                color: #F4B855;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
-    }
+        }
 
-}
+        .links{
+            display: flex;
+            margin-top: 10vh;
+
+            strong{
+                width: 30vh;
+                gap: 15vh;
+            }
+            
+                a {
+                    color: #F4B855;
+                    gap: 20vh;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+        }
+
+       
+
+        
+        
+    }
+    
