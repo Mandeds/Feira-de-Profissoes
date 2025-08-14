@@ -13,19 +13,12 @@
         display: flex;
         align-items: center;
         width: 100%;
-        top: 0;
         height: 150px;
         position: fixed;
-        justify-content: center;
+        padding: 2vh;
 
     }
-
-    .logo {
-        height: 130px;
-        position: fixed;
-        left: 50px;
-    }
-
+    
     header > strong {
         display: flex;
         justify-content: space-around;
@@ -60,32 +53,33 @@
     }
 
 
-    .freifotinha {
-        height: 394px;
-        width: 648px;
+    .freifotinha {  
+        height: 20vh;
+        width: 20vh;
         position: relative;
         left: 29%;
         top: 80px;
     }
-
-    h1 {
-        color: #fff;
-        text-shadow: 3px 3px 3px rgb(255, 102, 0), 5px 5px 5px rgb(0, 110, 255), 7px 7px 7px rgb(206, 99, 99), 9px 9px 9px rgb(153, 73, 73), 11px 11px 11px rgb(152, 68, 221);
-        font-family: "Bungee";
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 37px;
-    }
-
+    
     .texto {
         display: flex;
-        position: fixed;
+        margin-right: 20vh;
+        align-items: center;
+        justify-content: center;
+        background-color: #364FDA;
+        width: 80vh;
+        height: 13vh;
+        border-radius: 45px;
         text-align: center;
-        height: 100%;
-        width: 50px;
-        left: 95%;
-        top: 150px;
+        display: flex;
+        align-items: center;
 
+            h1 {
+                color: #fff;
+                text-shadow: 3px 3px 3px rgb(255, 102, 0), 5px 5px 5px rgb(0, 110, 255), 7px 7px 7px rgb(206, 99, 99), 9px 9px 9px rgb(153, 73, 73), 11px 11px 11px rgb(152, 68, 221);
+                font-family: "Bungee";
+                font-size: 37px;
+            }
     }
+
 }

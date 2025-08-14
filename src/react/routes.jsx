@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router"
-import Index from "./home.jsx"
-import Cadastro from "./pages/Cadastro.jsx"
+import Index from "./home"
+
 
 
 export default function Navegar() {
@@ -8,7 +8,6 @@ export default function Navegar() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/cadastro" element={<Cadastro />} />
       </Routes>
     </BrowserRouter>
   )
