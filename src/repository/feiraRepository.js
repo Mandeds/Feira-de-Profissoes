@@ -17,19 +17,20 @@ export async function inserirPessoa(dados){
         INSERT INTO pessoa (nome, aniversario, soube_feira, ex_aluno, telefone, cpf, escolaridade, interesse_curso)
         VALUES
         (?,?,?,?,?,?,?,?);
-        `; 
+        ` 
 
         const [registro] = await connection.query(comando, [
                 dados.nome,
-                dados.anivesario,
+                dados.aniversario,
                 dados.soube_feira,
+                dados.ex_aluno,
                 dados.telefone,
                 dados.cpf,
                 dados.escolaridade,
                 dados.interesse_curso
         ]);
 
-        return registro.insertid;
+        return registro.insertId;
 }
 
 /*
