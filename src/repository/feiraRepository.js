@@ -45,4 +45,35 @@ CREATE TABLE pessoa (
   escolaridade VARCHAR(50),
   interesse_curso VARCHAR(100)
 );
+
+
+
+
+CREATE TABLE chegou(
+        chegou_id 
+        Pessoa_id
+        Firegugbasdjasbhdjabvhsd,
+        qrcode,
+);
+
+
+
+CREATE TABLE andar1(
+        id_andar,
+        id_pessoa
+        Sala1 True,
+        Sala2 TRue,
+        Saça3 TRue
+);
+
+CREATE TABLE andar2(
+        Sala1 True,
+        Sala2 TRue,
+        Saça3 TRue
+);
+CREATE TABLE andar3(
+        Sala1 True,
+        Sala2 TRue,
+        Saça3 TRue
+);
 */
