@@ -15,11 +15,11 @@ export default function home() {
 
                 <div id='quadrado_inicio'>
                     
-                <div className="links">
-                    <strong><a href="#">INICIO</a></strong>
-                    <strong><a href="#">SOBRE</a></strong>
-                    <strong><a href="#">CONTATO</a></strong>
-                </div>
+                    <div className="links">
+                        <strong><a href="#">INICIO</a></strong>
+                        <strong><a href="#">SOBRE</a></strong>
+                        <strong><a href="#">CONTATO</a></strong>
+                    </div>
                     
                     <div id='quadrado_pequeno'>
                         <div id='quadrado_borda' >
@@ -28,17 +28,17 @@ export default function home() {
                     </div>
 
                     <div id="maior">
-                    <img src="src/assets/images/Group6.png"/>
+                        <img src="src/assets/images/Group6.png"/>
                     </div>
                     
                 </div>
-                
-                <button>
+
+                               
+                <button className="botao">  
                     <Link to={'/cadastro'}>Cadastro</Link >
                     <Link to={'/login'} > É O LOGAS</Link>
                 </button>
-
-
+                
                 <section className="pagina">
 
                 </section>

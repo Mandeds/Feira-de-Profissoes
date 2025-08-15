@@ -17,13 +17,13 @@ export default function Cadastro() {
 
             <div className="cadastro">
                 <h1>Nome</h1>
-                <input type="text" />
+                <input type="text" placeholder="Pedro Alberto da Silva" />
                 <h1>Email</h1>
-                <input type="email" />
+                <input type="email" placeholder="pedroalberto@gmail.com" />
                 <h1>Telefone</h1>
-                <input type="phone" />
+                <input type="phone" placeholder="11953826619" />
                 <h1>CPF</h1>
-                <input type="text" />
+                <input type="text" placeholder="546.725.667-10"/>
                 
                 <h1>Escolaridade</h1>
                 <select>
@@ -34,9 +34,13 @@ export default function Cadastro() {
                     <option value=""></option>
                 </select>
 
-                <h3>Ex-Aluno?</h3>
-                <input type="checkbox"  />
-                <input type="button" value="" />
+                <div className="Ex">
+                    <h3>Ex-Aluno?</h3>
+                    <input type="checkbox"/>
+                        <strong>
+                            <p>·Sim</p>
+                        </strong>
+                </div>
 
 
                 <h1>Como soube da feira?</h1>

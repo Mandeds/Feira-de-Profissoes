@@ -6,6 +6,13 @@
         background-image: url('src/assets/images/background-degrade-inicio.png');
         width: 100%;
         height: 300vh;
+
+        main{
+            .botao{
+                position: relative;
+                margin-top: 450px;
+            }
+        }
         
         
         .vemprofrei {
@@ -85,6 +92,9 @@
                     width: 180px;
                 }
             }
+
+
+
         }
         
     }
