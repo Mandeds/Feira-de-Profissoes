@@ -18,6 +18,20 @@ export default function home() {
                     <strong><a href="#">CONTATO</a></strong>
                 </div>
 
+                <div id='quadrado_inicio'>
+                    
+                    <div id='quadrado_pequeno'>
+                        <div id='quadrado_borda' >
+                            <img id='imagens_inicio' src="src/assets/images/WhatsApp_Image_2025-07-29_at_16-removebg-preview 2.png" alt="100px" />
+                        </div>
+                    </div>
+
+                    <div id="maior">
+                    <img src="src/assets/images/Group6.png"/>
+                    </div>
+                    
+                </div>
+                
                 <button>
                     <Link to={'/cadastro'}>Cadastro</Link >
                 </button>

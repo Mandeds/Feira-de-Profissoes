@@ -39,9 +39,44 @@
                 }
         }
 
-       
+        #quadrado_inicio{
 
-        
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #maior{
+            border-radius: 121px;
+            background-color: #4861EA;
+            color: #4861EA;
+            width: 60%;
+            max-height: 30%;
+        }
+
+        #quadrado_pequeno{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            border-radius: 50px;
+            background-color: #405BEE;
+            width: 20%;
+            
+
+            #quadrado_borda{
+                display: flex;
+                border-radius: 50px;
+                width: 95%;
+                height: auto;
+                margin: 5%;
+                background-color: #476AFF;
+                justify-content: center;
+
+                #imagens_inicio{
+                    width: 180px;
+                }
+            }
+        }
         
     }
     
