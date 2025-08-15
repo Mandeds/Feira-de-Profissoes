@@ -12,13 +12,14 @@ export default function home() {
                     <h1>#VEMPROFREI</h1>
                 </div>
 
+
+                <div id='quadrado_inicio'>
+                    
                 <div className="links">
                     <strong><a href="#">INICIO</a></strong>
                     <strong><a href="#">SOBRE</a></strong>
                     <strong><a href="#">CONTATO</a></strong>
                 </div>
-
-                <div id='quadrado_inicio'>
                     
                     <div id='quadrado_pequeno'>
                         <div id='quadrado_borda' >
