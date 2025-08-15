@@ -1,6 +1,6 @@
 import "./style.scss";
 import "./global.scss"
-import { Link } from 'react-router';
+import { Link, Links } from 'react-router';
 
 
 export default function home() {
@@ -34,6 +34,7 @@ export default function home() {
                 
                 <button>
                     <Link to={'/cadastro'}>Cadastro</Link >
+                    <Link to={'/login'} > É O LOGAS</Link>
                 </button>
 
 
