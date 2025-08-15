@@ -24,8 +24,13 @@
         }
 
         .links{
+            background-color: #405BEE;
             display: flex;
-            margin-top: 10vh;
+            width: 45%;
+            height: 3vh;
+            margin: 1%;
+            text-align: center;
+            //margin-top: 10vh;
 
             strong{
                 width: 30vh;
@@ -40,9 +45,13 @@
         }
 
         #quadrado_inicio{
-
+            width: 80%;
+            background-color: aqua;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;position: absolute;
+            gap: 20%;
+            flex-direction: row;
 
         }
 
@@ -50,7 +59,7 @@
             border-radius: 121px;
             background-color: #4861EA;
             color: #4861EA;
-            width: 60%;
+            width: 80%;
             max-height: 30%;
         }
 
