@@ -1,5 +1,5 @@
 import "./style.scss";
-import "./global.scss"
+import "../global.scss"
 import { Link } from 'react-router';
 
 

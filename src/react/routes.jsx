@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router"
-import Index from "./home"
-import Cadastro from "./cadastro"
+import Index from "./home/home"
+import Cadastro from "./register/cadastro"
 
 
 
