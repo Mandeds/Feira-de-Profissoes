@@ -1,32 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router';
-import "./Login.scss";
-
-
+import React from 'react'
 
 const Login = () => {
   return (
-    <div className='container_login'>
-      <header>
-        <h1> <Link to={'/'}>Voltar</Link> </h1>
-        <div className="pageatual">
-          <h1>Login</h1>
-        </div>
-        <img src="src/assets/images/user2.png" />
-      </header>
-
-
+    <div className='container'>
       <div className="container_login">
         <form>
-          <label >Usuario:</label>
+          <label>Usuario:</label>
           <input type="text" placeholder='Usuario' id='usuario' />
-          <label htmlFor=""> Senha:</label>
-          <input type="password" name="" id="senha" placeholder='Senhaforte' />
+          <label>Senha:</label>
+          <input type="password" id="senha" placeholder='Senhaforte' />
         </form>
-        <button className='logar' type='button'>Entrar</button>
+        <button type='button'>Entrar</button>
       </div>
-
-
     </div>
   )
 }

@@ -1,53 +1,55 @@
-.container{
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
-        color: #fff;
+@media screen,
+(max-width: 1440px) {
+    .container {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding: 15px 40px;
-        border-radius: 0 0 20px 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 
-
-
-        .pageatual{
+        header {
             display: flex;
-            border: 2px solid #FFFFFF;
-            width: 55vh;
-            height: 16vh;
-            border-radius: 55px;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            background-color: #FFC857;
+            background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
+            color: #fff;
+            font-family: inherit;
+            padding: 15px 40px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+            .Link {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .pageatual {
+                display: flex;
+                border: 2px solid #FFFFFF;
+                width: 55vh;
+                height: 16vh;
+                border-radius: 55px;
+                align-items: center;
+                justify-content: center;
+                background-color: #FFC857;
+            }
         }
-    }
 
-
-    .cadastro{
-        background-color: #F4FCFF;
-        width: 150vh;
-        margin-left: 17.5%;
-        margin-top: 5vh;
-        display: flex;
-        flex-direction: column;
-        padding-left: 5vh;
-        padding-top: 5vh;
-        box-shadow: 1px 5px 10px 1px black;
-        height: 80vh;
-        border-radius: 15px;
-
-        .box{
+        .cadastro {
+            background-color: #F4FCFF;
+            width: 150vh;
+            margin-left: 25vh;
+            margin-top: 5vh;
             display: flex;
-            align-items: center;
-            margin-top: 2.5vh;
+            flex-direction: column;
+            padding-left: 5vh;
+            padding-top: 5vh;
+            box-shadow: 1px 5px 10px 1px black;
+            height: 80vh;
+            border-radius: 15px;
 
-                input{
+            .box {
+                display: flex;
+                align-items: center;
+                margin-top: 2.5vh;
+
+                input {
                     height: 35px;
                     border-radius: 5px;
                     padding-left: 1vh;
@@ -56,25 +58,25 @@
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 }
 
-                .phone{
+                .phone {
                     margin-left: 5vh;
                 }
 
-                .phoneInput{
+                .phoneInput {
                     height: 35px;
                     border-radius: 5px;
                     padding-left: 1vh;
                     margin-left: 1vh;
-                    width: 41.4vh;
+                    width: 47.9vh;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 }
-        }
+            }
 
-        .box1{
-            display: flex;
-            align-items: center;
-            
-                input{
+            .box1 {
+                display: flex;
+                align-items: center;
+
+                input {
                     height: 35px;
                     border-radius: 5px;
                     padding-left: 1vh;
@@ -82,24 +84,23 @@
                     width: 119.5vh;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 }
-        }
+            }
 
-        .box2{
-            display: flex;
-            align-items: center;
-            margin-top: 2.5vh;
+            .box2 {
+                display: flex;
+                align-items: center;
+                margin-top: 2.5vh;
 
-                input{
+                input {
                     height: 35px;
                     border-radius: 5px;
                     padding-left: 1vh;
-                    margin-left: 5.8vh;
+                    margin-left: 5vh;
                     width: 49vh;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
                 }
 
-                select{
+                select {
                     width: 29vh;
                     height: 6vh;
                     background-color: #D9D9D9;
@@ -108,71 +109,158 @@
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 }
 
-                .School{
+                .School {
                     margin-left: 5vh;
                 }
-        }
-
-        .box3{
-            display: flex;
-            align-items: center;
-            margin-top: 2.5vh;
-            flex-direction: row;
-
-            select{
-                height: 7vh;
-                width: 81vh;
-                margin-right: 1vh;
-                background-color: #D9D9D9;
-                border-radius: 5px;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
 
-            .Ex{
+            .box3 {
                 display: flex;
-                margin-left: 50vh;
+                align-items: center;
+                margin-top: 2.5vh;
                 flex-direction: row;
-                font-size: 15px;
-                position: relative;
-                right: 40vh;
-                top: -1vh;
+
+                select {
+                    height: 7vh;
+                    width: 81vh;
+                    margin-right: 1vh;
+                    background-color: #D9D9D9;
+                    border-radius: 5px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                }
+
+                .Ex {
+                    display: flex;
+                    margin-left: 50vh;
+                    flex-direction: row;
+                    font-size: 15px;
+                    position: relative;
+                    right: 40vh;
+                    top: -1vh;
+                    align-items: center;
+
+                    h3 {
+                        width: 34vh;
+                        padding-left: 5vh;
+                    }
+                }
+            }
+
+            input {
+                background-color: #D9D9D9;
+                border: 1px solid #000000;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+        }
+
+        .datehappybirthday {
+            display: flex;
+            margin-top: 2vh;
+
+            input {
+                margin-left: 1vh;
+                border-radius: 5px;
+                background-color: #D9D9D9;
+            }
+        }
+
+        button {
+            width: 50vh;
+            height: 10vh;
+            margin-left: 46vh;
+            margin-top: 5vh;
+            border-radius: 25vh;
+            font-size: 22px;
+            border: solid 1px black;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .container {
+        header {
+            flex-direction: row;
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            gap: 3vh;
+
+            .pageatual {
+                width: 90%;
+                height: 15%;
+
+            }
+        }
+
+        .cadastro {
+            width: 95%;
+            margin: 20px auto;
+            height: auto;
+            padding: 20px;
+
+            .box,
+            .box1,
+            .box2,
+            .box3 {
+                flex-direction: column;
                 align-items: center;
 
-                h3{
-                    width: 34vh;
-                    padding-left: 5vh;
+                input,
+                select {
+                    width: 100% ;
+                    margin: 5px ;
+                }
+            }
+
+            .Ex {
+                display: flex;
+                position: relative;
+                left: -25vh;
+                width: 35vh;
+                margin-top: 2vh;
+
+                flex-direction: row;
+
+                
+                    input{
+                        width: 10px;
+                    }
+            }
+        }
+
+        button {
+            width: 90%;
+            margin: 20px auto;
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        .cadastro {
+            width: 90%;
+            margin: 5vh auto;
+            height: auto;
+
+            .box,
+            .box1,
+            .box2,
+            .box3 {
+
+                input,
+                select {
+                    width: 100% !important;
                 }
             }
         }
 
-
-        input{
-            background-color: #D9D9D9;
-            border: 1px solid #000000;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        button {
+            width: 70%;
+            margin: 30px auto;
+            display: block;
         }
-    }
-
-
-    .datehappybirthday{
-        display: flex;
-        margin-top: 2vh;
-        
-        input{
-            margin-left: 1vh;
-            border-radius: 5px;
-            background-color: #D9D9D9;
-        }
-
-    }
-
-
-    button{
-        width: 50vh;
-        height: 10vh;
-        margin-left: 48vh;
-        margin-top: 5vh;
-        border-radius: 25vh;
-        border: solid 1px black;
     }
 }
+

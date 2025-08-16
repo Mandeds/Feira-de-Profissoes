@@ -12,47 +12,59 @@ export default function Cadastro() {
   const [curso, setCurso] = useState("");
   const [exAluno, setExAluno] = useState(false);
   const [informations, setInformations] = useState("");
-  const [date, setdate] = useState("");
+  const [date, setDate] = useState("");
 
-  let url = `http://localhost:5022/pessoas`
-
-
+  let url = `http://localhost:5001/pessoas`;
 
   function EnviarDados() {
+    if (!date) {
+      alert("Por favor, selecione a data de nascimento!");
+      return;
+    }
 
 
     fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         nome: name,
+        email: email, // corrigido
         aniversario: date,
         soube_feira: informations,
         ex_aluno: exAluno,
         telefone: phone,
         cpf: cpf,
         escolaridade: escolaridade,
-        interesse_curso: curso
-      })
+        interesse_curso: curso,
+      }),
     })
-      .then(data => {
-        alert('Cadastro realizado com sucesso!');
-        alert(`Olá ${name}!\nEstaremos aguardando você no dia em!`);
+      .then((res) => {
+        if (!res.ok) throw new Error("Erro ao cadastrar");
+        return res.text();
       })
+
+      .then(() => {
+        alert("Cadastro realizado com sucesso!");
+        alert(`Olá ${name}!\nEstaremos aguardando você no dia ${date}!`);
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Ocorreu um erro ao cadastrar. Tente novamente.");
+      });
   }
-
-
 
   return (
     <div className="container">
       <header>
-        <h1><Link to={'/'}>Voltar</Link></h1>
+        <Link className="Link" to="/">
+        <h1>Voltar</h1>
+        </Link>
         <div className="pageatual">
           <h1>Cadastro</h1>
         </div>
-        <img src="src/assets/images/user2.png" />
+        <img src="src/assets/images/user2.png" alt="Usuário" />
       </header>
 
       <div className="cadastro">
@@ -63,6 +75,7 @@ export default function Cadastro() {
             placeholder="Pedro Alberto da Silva"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
 
@@ -73,6 +86,7 @@ export default function Cadastro() {
             placeholder="pedroalberto@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
 
           <h2 className="phone">Telefone:</h2>
@@ -82,6 +96,7 @@ export default function Cadastro() {
             placeholder="11953826619"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            required
           />
         </div>
 
@@ -92,6 +107,7 @@ export default function Cadastro() {
             placeholder="546.725.667-10"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
+            required
           />
 
           <h2 className="School">Escolaridade</h2>
@@ -115,7 +131,6 @@ export default function Cadastro() {
             <option value="informatica">Informática</option>
             <option value="administracao">Administração</option>
             <option value="cv">Comunicação Visual</option>
-
           </select>
 
           <div className="Ex">
@@ -133,15 +148,19 @@ export default function Cadastro() {
 
         <div className="datehappybirthday">
           <h3>Data de Nasc.</h3>
-          <input type="date"
+          <input
+            type="date"
             value={date}
-            onChange={(e) => setdate(e.target.value)}
+            onChange={(e) => setDate(e.target.value)}
+            required
           />
         </div>
 
         <div className="box">
           <h2>Como soube da feira?</h2>
-          <input type="text" value={informations}
+          <input
+            type="text"
+            value={informations}
             onChange={(e) => setInformations(e.target.value)}
           />
         </div>

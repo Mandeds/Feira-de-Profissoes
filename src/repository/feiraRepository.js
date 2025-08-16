@@ -1,37 +1,37 @@
+import {connection} from './connection.js'
 
 
 
-import { connection } from './connection.js';
-
-// Listar todas as pessoas
 export async function listarPessoas() {
-    const comando = `SELECT * FROM feira_profissoes;`;
-    const [registros] = await connection.query(comando);
-    return registros;
+        let comando = `
+        SELECT * FROM feira_profissoes;
+        `
+        let [registros] = await connection.query(comando)   
+        return registros     
 }
 
-// Inserir nova pessoa
-export async function inserirPessoa(dados) {
-    const comando = `
-        INSERT INTO feira_profissoes
-        (nome, aniversario, soube_feira, ex_aluno, telefone, cpf, escolaridade, interesse_curso)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?);
-    `;
 
-    const [registro] = await connection.query(comando, [
-        dados.nome,
-        dados.aniversario || null,
-        dados.soube_feira,
-        dados.ex_aluno ? 1 : 0,
-        dados.telefone,
-        dados.cpf,
-        dados.escolaridade,
-        dados.interesse_curso
-    ]);
 
-    return registro.insertId;
+export async function inserirPessoa(dados){
+        let comando = `
+        INSERT INTO feira_profissoes (nome, aniversario, soube_feira, ex_aluno, telefone, cpf, escolaridade, interesse_curso)
+        VALUES
+        (?,?,?,?,?,?,?,?);
+        ` 
+
+        const [registro] = await connection.query(comando, [
+                dados.nome,
+                dados.aniversario,
+                dados.soube_feira,
+                dados.ex_aluno,
+                dados.telefone,
+                dados.cpf,
+                dados.escolaridade,
+                dados.interesse_curso
+        ]);
+
+        return registro.insertId;
 }
-
 
 /*
 CREATE TABLE pessoa (
@@ -46,18 +46,6 @@ CREATE TABLE pessoa (
   interesse_curso VARCHAR(100)
 );
 
-Aqui e o Mgs kk
-CREATE TABLE feira_profissoes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    aniversario DATE,
-    soube_feira VARCHAR(100),
-    ex_aluno BOOLEAN DEFAULT FALSE,
-    telefone VARCHAR(20),
-    cpf VARCHAR(20),
-    escolaridade VARCHAR(50),
-    interesse_curso VARCHAR(100)
-);
 
 
 
