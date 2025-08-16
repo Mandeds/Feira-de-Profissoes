@@ -33,6 +33,25 @@ export async function inserirPessoa(dados) {
 }
 
 
+
+
+
+
+export async function verificarAdmin(dados) {
+    const comando = `
+    SELECT * FROM useradmin
+        WHERE nome = ? AND password = ?
+`
+
+    let [info] = await connection.query(comando, [
+        dados.nome,
+        dados.password
+    ])
+
+    return info; 
+
+}
+
 /*
 CREATE TABLE pessoa (
   id INT PRIMARY KEY,
@@ -45,6 +64,13 @@ CREATE TABLE pessoa (
   escolaridade VARCHAR(50),
   interesse_curso VARCHAR(100)
 );
+
+CREATE TABLE useradmin(
+id int primary key auto_increment,
+nome varchar(200),
+password varchar(100)
+);
+
 
 Aqui e o Mgs kk
 CREATE TABLE feira_profissoes (
