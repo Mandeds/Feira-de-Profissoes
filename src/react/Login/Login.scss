@@ -1,0 +1,99 @@
+.container_login {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    header {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(180deg, #f4bf50 0%, #ffc857 100%);
+        padding: 15px 20px;
+        border-radius: 0px 0px 10px 10px;
+        color: white;
+        margin-bottom: 40px;
+
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+
+        .pageatual {
+            h1 {
+                font-size: 22px;
+                margin: 0;
+            }
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+    }
+
+    // Formulário
+    .container_login {
+        width: 100%;
+        max-width: 400px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 5px;
+                color: #333;
+                font-size: 14px;
+            }
+
+            input {
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid #ddd;
+                margin-bottom: 15px;
+                background-color: #f0f0f0;
+                transition: border-color 0.3s;
+
+                &:focus {
+                    border-color: #ffc857;
+                    outline: none;
+                }
+            }
+        }
+
+        button.logar {
+            background-color: #ffc857;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #c99e40;
+            }
+        }
+    }
+}

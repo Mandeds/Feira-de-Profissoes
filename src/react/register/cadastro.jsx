@@ -1,6 +1,7 @@
 import { useState } from "react";
-import "./style.scss";
+import "./cadastro.scss";
 import "../global.scss";
+import { Link } from "react-router";
 
 export default function Cadastro() {
   const [name, setName] = useState("");
@@ -47,7 +48,7 @@ export default function Cadastro() {
   return (
     <div className="container">
       <header>
-        <h1>Voltar</h1>
+        <h1><Link to={'/'}>Voltar</Link></h1>
         <div className="pageatual">
           <h1>Cadastro</h1>
         </div>
