@@ -1,63 +1,67 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Login.scss";
-
-
 
 const Login = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const navigate = useNavigate();  // UseNavigate deve ser chamado aqui
-
-  let url = 'http://localhost:5022/admin';  // Verifique a URL correta
+  let url = 'http://localhost:5022/admin';
 
   const verificarAdmin = () => {
     fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        nome: name,
-        password: password
-      }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome: name, password: password }),
     })
+      .then((res) => res.json()) // precisa converter a resposta
       .then((data) => {
         if (data.isAdmin) {
           alert(`Login bem-sucedido! Bem-vindo, ${data.nome}`);
-          navigate('/admin');  // Redireciona para /admin
+          navigate('/admin');
         } else {
-          alert('Usuário não autorizado');  // Caso o usuário não seja admin
+          alert('Usuário não autorizado');
         }
       })
       .catch((error) => {
-        alert(error.message);  // Exibe erro, como "Usuário ou senha incorretos"
+        alert(error.message);
       });
   };
 
   return (
     <div className='container_login'>
       <header>
-        <h1> <Link to={'/'}>Voltar</Link> </h1>
+        <h1><Link to={'/'}>Voltar</Link></h1>
         <div className="pageatual">
           <h1>Login</h1>
         </div>
-        <img src="src/assets/images/user2.png" />
+        <img src="src/assets/images/user2.png" alt="User" />
       </header>
-
 
       <div className="container_login">
         <form>
-          <label >Usuario:</label>
-          <input type="text" placeholder='Usuario' id='usuario' />
-          <label htmlFor=""> Senha:</label>
-          <input type="password" name="" id="senha" placeholder='Senhaforte' />
+          <label>Usuario:</label>
+          <input
+            type="text"
+            placeholder='Usuario'
+            id='usuario'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <label>Senha:</label>
+          <input
+            type="password"
+            id="senha"
+            placeholder='Senhaforte'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </form>
-        <button className='logar' type='button'>Entrar</button>
+        <button className='logar' type='button' onClick={verificarAdmin}>Entrar</button>
       </div>
     </div>
   );
 };
 
-export default Login
+export default Login;

@@ -1,10 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router"
-import Index from "./home/home"
-import Cadastro from "./register/cadastro"
-import Login from "./Login/Login"
-
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./home/home";
+import Cadastro from "./register/cadastro";
+import Login from "./Login/Login";
 
 export default function Navegar() {
   return (
@@ -15,6 +12,5 @@ export default function Navegar() {
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
-
