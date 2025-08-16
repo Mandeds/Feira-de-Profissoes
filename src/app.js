@@ -1,4 +1,4 @@
-import express from    'express';
+import express from 'express';
 import { adicionarRotas } from './rotas.js';
 import cors from 'cors';
 
@@ -9,4 +9,4 @@ api.use(cors());
 adicionarRotas(api);
 
 
-api.listen(5010, () => console.log("Api subiu com sucesso na porta 5010"))
+api.listen(5022, () => console.log("Api subiu com sucesso na porta 5022"))

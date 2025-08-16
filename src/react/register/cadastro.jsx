@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./style.scss";
 import "../global.scss";
-import * as Controller from "../../controller/feiraController.js"
 
 export default function Cadastro() {
   const [name, setName] = useState("");
@@ -14,11 +13,36 @@ export default function Cadastro() {
   const [informations, setInformations] = useState("");
   const [date, setdate] = useState("");
 
-  function EnviarDados() {
-    alert(`Olá ${name}!\nEstaremos aguardando você no dia em!`);
+  let url = `http://localhost:5022/pessoas`
 
-    
+
+
+  function EnviarDados() {
+
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        nome: name,
+        aniversario: date,
+        soube_feira: informations,
+        ex_aluno: exAluno,
+        telefone: phone,
+        cpf: cpf,
+        escolaridade: escolaridade,
+        interesse_curso: curso
+      })
+    })
+      .then(data => {
+        alert('Cadastro realizado com sucesso!');
+        alert(`Olá ${name}!\nEstaremos aguardando você no dia em!`);
+      })
   }
+
+
 
   return (
     <div className="container">
@@ -52,7 +76,7 @@ export default function Cadastro() {
 
           <h2 className="phone">Telefone:</h2>
           <input
-          className="phoneInput"
+            className="phoneInput"
             type="tel"
             placeholder="11953826619"
             value={phone}
@@ -90,7 +114,7 @@ export default function Cadastro() {
             <option value="informatica">Informática</option>
             <option value="administracao">Administração</option>
             <option value="cv">Comunicação Visual</option>
-            
+
           </select>
 
           <div className="Ex">
@@ -107,18 +131,18 @@ export default function Cadastro() {
         </div>
 
         <div className="datehappybirthday">
-            <h3>Data de Nasc.</h3>
-            <input type="date" 
+          <h3>Data de Nasc.</h3>
+          <input type="date"
             value={date}
             onChange={(e) => setdate(e.target.value)}
-            /> 
+          />
         </div>
 
         <div className="box">
           <h2>Como soube da feira?</h2>
-            <input type="text" value={informations} 
-                onChange={(e) => setInformations(e.target.value)}
-            />
+          <input type="text" value={informations}
+            onChange={(e) => setInformations(e.target.value)}
+          />
         </div>
 
         <button onClick={EnviarDados}>Enviar Cadastro</button>
