@@ -33,6 +33,7 @@ export async function inserirPessoa(dados){
         return registro.insertId;
 }
 
+
 /*
 CREATE TABLE pessoa (
   id INT PRIMARY KEY,
@@ -45,6 +46,13 @@ CREATE TABLE pessoa (
   escolaridade VARCHAR(50),
   interesse_curso VARCHAR(100)
 );
+
+CREATE TABLE useradmin(
+id int primary key auto_increment,
+nome varchar(200),
+password varchar(100)
+);
+
 
 
 
