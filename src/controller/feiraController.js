@@ -10,6 +10,13 @@ endpoints.get('/pessoas', async (req, res) => {
         res.send(registros);
 })
 
+endpoints.post("/pesquisa", async (req, res) => {
+        let dados = req.body;
+
+        let registro = await repo.procurarPessoa(dados);
+        res.send(registro);
+});
+
 
 endpoints.post('/pessoas', async (req, res) => {
         let dados = req.body;

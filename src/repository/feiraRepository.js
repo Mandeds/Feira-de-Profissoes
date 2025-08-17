@@ -10,6 +10,18 @@ export async function listarPessoas() {
         return registros
 }
 
+export async function procurarPessoa(dados) {
+        const { nome, cpf } = dados;
+
+
+        let comando = ` 
+        SELECT * FROM pessoa
+                WHERE  nome LIKE ? OR cpf LIKE ?;
+        `;
+        let [info] = await connection.query(comando, [`%${nome}%`, `%${cpf}%`])
+        return info;
+}
+
 
 
 export async function inserirPessoa(dados) {
