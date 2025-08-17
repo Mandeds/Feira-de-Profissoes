@@ -6,85 +6,65 @@ export default function Home() {
     return (
         <div className="tudo">
             <main>
-                <div className="vemprofrei">
-                    <h1>VEMPROFREI</h1>
+                <header className="header_inicio">
+                    <div className="vemprofrei">
+                        <h1 className="texto-letras">
+                            <span>V</span>
+                            <span>E</span>
+                            <span>M</span>
+                            <span>P</span>
+                            <span>R</span>
+                            <span>O</span>
+                            <span>F</span>
+                            <span>R</span>
+                            <span>E</span>
+                            <span>I</span>
+                        </h1>
+                    </div>
+
+                    <div id="quadrado_inicio">
+
+                        <div className="links">
+                            <strong><a href="#">INICIO</a></strong>
+                            <strong><a href="#">SOBRE</a></strong>
+                            <strong><a href="#">CONTATO</a></strong>
+                        </div>
+                        <div id="quadrado_pequeno">
+                            <div id="quadrado_borda">
+                                <img
+                                    id="imagens_inicio"
+                                    src="src/assets/images/WhatsApp_Image_2025-07-29_at_16-removebg-preview 2.png"
+                                    alt="Ícone"
+                                />
+                            </div>
+                        </div>
+
+                        <div id="maior">
+                            <img
+                                id="Logo_inicio"
+                                src="src/assets/images/Group6.png"
+                                width="450px"
+                                alt="Logo"
+                            />
+                        </div>
+                    </div>
+                    <div className="botao">
+                        <Link to={"src/react/register/cadastro.jsx"}>Cadastro</Link>
+                        <Link to={"src/react/Login/Login.jsx"}>Login</Link>
+                    </div>
+                </header>
+                <section className="pagina"></section>
+                <div class='carrossel'>
+
+                    <div class='carrossel__item'>
+                        <img src="./src/assets/images/Rectangle 64.png" alt="Imagem 3" />
+                    </div>
+
                 </div>
-
-                <section>
-                    <div className="box1">
-                        <div className="backgroundlogo">
-                            <img src="src/assets/images/WhatsApp_Image_2025-07-29_at_16-removebg-preview 2.png" />
-                        </div>
-                    </div>
-
-                    <div className="textos">
-                        <h3>INICIO</h3>
-                        <h3>SOBRE</h3>
-                        <h3>CONTATOS</h3>
-                    </div>
-
-                    <div className="box2">
-                        <img src="src/assets/images/Group6.png" />
-                    </div>
-
-                </section>
-
-
-
-
-
-                <section className="pagina">
-
-                    <div className="botoes">
-                        <button>
-                            <Link to={"/cadastro"}>Cadastro</Link>
-                        </button>
-
-                        <button>
-                            <Link to={"/login"}>É O LOGAS</Link>
-                        </button>
-                    </div>
-
-
-                    <section className="cartoescursos">
-                        <div className="cartao">
-                            <img src="" />
-                        </div>
-
-                        <div className="cartao">
-                            <img src="" alt="" />
-                        </div>
-                        
-                        <div className="cartao">
-                            <img src="" alt="" />
-                        </div>                   
-                        
-                        <div className="cartao">
-                            <img src="" alt="" />
-                        </div>                      
-                        
-                        <div className="cartao">
-                            <img src="" alt="" />
-                        </div>
-
-                    </section>
-                </section>
-
-                <footer>
-                    <div className="cartaofooter">
-
-                    </div>
-
-                    <section className="sites">
-                        <h3>VEJA NOSSAS OUTRAS PLATAFORMAS</h3>
-
-                        <button>INSTAGRAM</button>
-                        <button>SITE</button>
-                        <button>APLICATIVO</button>
-                    </section>
-                </footer>
-
             </main>
+                <div class="final">
+                <p>a</p>
+            </div>
         </div>
     );
 }

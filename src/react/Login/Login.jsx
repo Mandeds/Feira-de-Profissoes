@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
@@ -59,6 +59,11 @@ const Login = () => {
           />
         </form>
         <button className='logar' type='button' onClick={verificarAdmin}>Entrar</button>
+
+        <p>
+        Não tem uma conta? <Link to="/cadastro">Cadastrar-se</Link>
+      </p>
+
       </div>
     </div>
   );
