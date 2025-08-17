@@ -1,26 +1,27 @@
-import {connection} from './connection.js'
+import { connection } from './connection.js'
 
 
 
 export async function listarPessoas() {
         let comando = `
-        SELECT * FROM feira_profissoes;
+        SELECT * FROM pessoa;
         `
-        let [registros] = await connection.query(comando)   
-        return registros     
+        let [registros] = await connection.query(comando)
+        return registros
 }
 
 
 
-export async function inserirPessoa(dados){
+export async function inserirPessoa(dados) {
         let comando = `
-        INSERT INTO feira_profissoes (nome, aniversario, soube_feira, ex_aluno, telefone, cpf, escolaridade, interesse_curso)
+        INSERT INTO pessoa (nome,email, aniversario, soube_feira, ex_aluno, telefone, cpf, escolaridade, interesse_curso)
         VALUES
-        (?,?,?,?,?,?,?,?);
-        ` 
+        (?,?,?,?,?,?,?,?, ?);
+        `
 
         const [registro] = await connection.query(comando, [
                 dados.nome,
+                dados.email,
                 dados.aniversario,
                 dados.soube_feira,
                 dados.ex_aluno,
@@ -33,11 +34,26 @@ export async function inserirPessoa(dados){
         return registro.insertId;
 }
 
+export async function verificarAdmin(dados) {
+        const comando = `
+    SELECT * FROM useradmin
+        WHERE nome = ? AND password = ?
+`
+
+        let [info] = await connection.query(comando, [
+                dados.nome,
+                dados.password
+        ])
+
+        return info;
+
+}
 
 /*
 CREATE TABLE pessoa (
-  id INT PRIMARY KEY,
+  id INT PRIMARY KEY auto_increment,
   nome VARCHAR(100),
+  email VARCHAR(200),
   aniversario DATE,
   soube_feira VARCHAR(100),
   ex_aluno BOOLEAN,

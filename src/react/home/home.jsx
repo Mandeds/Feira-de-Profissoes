@@ -49,20 +49,21 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="botao">
-                        <Link to={"src/react/register/cadastro.jsx"}>Cadastro</Link>
-                        <Link to={"src/react/Login/Login.jsx"}>Login</Link>
+                        {/* O caminho não é do arquivo é das rotas que foram previamente configuradas no arquivo routes.jsx */}
+                        <Link to={"/cadastro"}>Cadastro</Link>
+                        <Link to={"/login"}>Login</Link>
                     </div>
                 </header>
                 <section className="pagina"></section>
-                <div class='carrossel'>
+                <div className='carrossel'>
 
-                    <div class='carrossel__item'>
+                    <div className='carrossel__item'>
                         <img src="./src/assets/images/Rectangle 64.png" alt="Imagem 3" />
                     </div>
 
                 </div>
             </main>
-                <div class="final">
+            <div className="final">
                 <p>a</p>
             </div>
         </div>

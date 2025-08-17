@@ -30,7 +30,7 @@ export default function Cadastro() {
       },
       body: JSON.stringify({
         nome: name,
-        email: email, // corrigido
+        email: email,
         aniversario: date,
         soube_feira: informations,
         ex_aluno: exAluno,
@@ -59,7 +59,7 @@ export default function Cadastro() {
     <div className="container">
       <header>
         <Link className="Link" to="/">
-        <h1>Voltar</h1>
+          <h1>Voltar</h1>
         </Link>
         <div className="pageatual">
           <h1>Cadastro</h1>

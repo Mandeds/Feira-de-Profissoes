@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  let url = 'http://localhost:5022/admin';
+  let url = 'http://localhost:5001/admin';
 
   const verificarAdmin = () => {
     fetch(url, {
@@ -59,10 +59,7 @@ const Login = () => {
           />
         </form>
         <button className='logar' type='button' onClick={verificarAdmin}>Entrar</button>
-
-        <p>
-        Não tem uma conta? <Link to="/cadastro">Cadastrar-se</Link>
-      </p>
+        {/*  AQUI È LOGIN DE ADMS NÃO DE USUARIOS NORMAIS */}
 
       </div>
     </div>

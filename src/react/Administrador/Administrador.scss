@@ -1,0 +1,20 @@
+.container_administrador {
+    background: #25c1d6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+
+    .cards_bonitos {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    .carregar {
+        border: none;
+        padding: .8rem;
+        border-radius: 15px;
+    }
+}
