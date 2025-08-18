@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./home/home";
 import Cadastro from "./register/cadastro";
 import Login from "./Login/Login";
-import Administrador from "./Administrador/Administrador"
+import Administrador from "./Administrador/Administrador";
+import Sobre from "./Sobre/sobre"
 
 export default function Navegar() {
   return (
@@ -12,6 +13,7 @@ export default function Navegar() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Administrador />} />
+        <Route path="/sobre" element={<Sobre />} />
       </Routes>
     </BrowserRouter>
   );

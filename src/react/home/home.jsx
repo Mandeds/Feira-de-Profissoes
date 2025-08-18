@@ -26,7 +26,7 @@ export default function Home() {
 
                         <div className="links">
                             <strong><a href="#">INICIO</a></strong>
-                            <strong><a href="#">SOBRE</a></strong>
+                            <strong><Link to={'/Sobre'}>SOBRE</Link></strong>
                             <strong><a href="#">CONTATO</a></strong>
                         </div>
                         <div id="quadrado_pequeno">
