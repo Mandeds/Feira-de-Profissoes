@@ -19,7 +19,11 @@ export default function Sobre() {
             <section className="page">
                 <h2 className="texto1">Esforço que transforma, e o orgulho permanece</h2>
 
-                <section className="andar1">
+               
+
+            </section>
+
+             <section className="andar1">
                     <h1>PRIMEIRO</h1>
                     <h1 className="teste">ANDAR</h1>
                     
@@ -37,8 +41,6 @@ export default function Sobre() {
                     </div>
                     </div>
                 </section>
-
-            </section>
 
         </div>
     );

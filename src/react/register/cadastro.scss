@@ -1,266 +1,169 @@
-@media screen,
-(max-width: 1440px) {
-    .container {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+/* ----------- ESTILO BASE (comum a todos) ----------- */
+.container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
-            color: #fff;
-            font-family: inherit;
-            padding: 15px 40px;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-            .Link {
-                color: #fff;
-                text-decoration: none;
-            }
-
-            .pageatual {
-                display: flex;
-                border: 2px solid #FFFFFF;
-                width: 55vh;
-                height: 16vh;
-                border-radius: 55px;
-                align-items: center;
-                justify-content: center;
-                background-color: #FFC857;
-            }
-        }
-
-        .cadastro {
-            background-color: #F4FCFF;
-            width: 150vh;
-            margin-left: 25vh;
-            margin-top: 5vh;
-            display: flex;
-            flex-direction: column;
-            padding-left: 5vh;
-            padding-top: 5vh;
-            box-shadow: 1px 5px 10px 1px black;
-            height: 80vh;
-            border-radius: 15px;
-
-            .box {
-                display: flex;
-                align-items: center;
-                margin-top: 2.5vh;
-
-                input {
-                    height: 35px;
-                    border-radius: 5px;
-                    padding-left: 1vh;
-                    margin-left: 2.3vh;
-                    width: 49vh;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                }
-
-                .phone {
-                    margin-left: 5vh;
-                }
-
-                .phoneInput {
-                    height: 35px;
-                    border-radius: 5px;
-                    padding-left: 1vh;
-                    margin-left: 1vh;
-                    width: 47.9vh;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                }
-            }
-
-            .box1 {
-                display: flex;
-                align-items: center;
-
-                input {
-                    height: 35px;
-                    border-radius: 5px;
-                    padding-left: 1vh;
-                    margin-left: 1.4vh;
-                    width: 119.5vh;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                }
-            }
-
-            .box2 {
-                display: flex;
-                align-items: center;
-                margin-top: 2.5vh;
-
-                input {
-                    height: 35px;
-                    border-radius: 5px;
-                    padding-left: 1vh;
-                    margin-left: 5vh;
-                    width: 49vh;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                }
-
-                select {
-                    width: 29vh;
-                    height: 6vh;
-                    background-color: #D9D9D9;
-                    margin-left: 5vh;
-                    border-radius: 5px;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                }
-
-                .School {
-                    margin-left: 5vh;
-                }
-            }
-
-            .box3 {
-                display: flex;
-                align-items: center;
-                margin-top: 2.5vh;
-                flex-direction: row;
-
-                select {
-                    height: 7vh;
-                    width: 81vh;
-                    margin-right: 1vh;
-                    background-color: #D9D9D9;
-                    border-radius: 5px;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                }
-
-                .Ex {
-                    display: flex;
-                    margin-left: 50vh;
-                    flex-direction: row;
-                    font-size: 15px;
-                    position: relative;
-                    right: 40vh;
-                    top: -1vh;
-                    align-items: center;
-
-                    h3 {
-                        width: 34vh;
-                        padding-left: 5vh;
-                    }
-                }
-            }
-
-            input {
-                background-color: #D9D9D9;
-                border: 1px solid #000000;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            }
-        }
-
-        .datehappybirthday {
-            display: flex;
-            margin-top: 2vh;
-
-            input {
-                margin-left: 1vh;
-                border-radius: 5px;
-                background-color: #D9D9D9;
-            }
-        }
-
-        button {
-            width: 50vh;
-            height: 10vh;
-            margin-left: 46vh;
-            margin-top: 5vh;
-            border-radius: 25vh;
-            font-size: 22px;
-            border: solid 1px black;
-        }
+    .Link {
+      color: #fff;
+      text-decoration: none;
     }
 
+    .pageatual {
+      display: flex;
+      border: 2px solid #FFFFFF;
+      width: 50%;
+      border-radius: 3rem;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFC857;
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .cadastro {
+    background-color: #F4FCFF;
+    width: 70%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    min-height: 70vh;
+
+    .box, .box1, .box2, .box3 {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      input, select {
+        height: 2.2rem;
+        border-radius: 5px;
+        padding-left: 0.5rem;
+        margin-left: 1rem;
+        width: 100%;
+        max-width: 40%;
+        background-color: #D9D9D9;
+        border: 1px solid #000000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      select {
+        background-color: #D9D9D9;
+      }
+    }
+
+    .box1 input { max-width: 90%; }
+    .box3 select { max-width: 70%; }
+
+    .Ex {
+      display: flex;
+      margin-left: auto;
+      font-size: 1rem;
+      align-items: center;
+
+      h3 { padding-left: 1rem; }
+    }
+  }
+
+  .datehappybirthday {
+    display: flex;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 0.5rem;
+      border-radius: 5px;
+      background-color: #D9D9D9;
+    }
+  }
+
+  button {
+    width: 40%;
+    height: 3rem;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    border: solid 1px black;
+  }
 }
 
+/* ----------- CELULAR ----------- */
 @media (max-width: 600px) {
-    .container {
-        header {
-            flex-direction: row;
-            font-size: small;
-            display: flex;
-            justify-content: center;
-            gap: 3vh;
+  .container {
+    header {
+      flex-direction: column;
+      font-size: 0.8rem;
+      text-align: center;
 
-            .pageatual {
-                width: 90%;
-                height: 15%;
-
-            }
-        }
-
-        .cadastro {
-            width: 95%;
-            margin: 20px auto;
-            height: auto;
-            padding: 20px;
-
-            .box,
-            .box1,
-            .box2,
-            .box3 {
-                flex-direction: column;
-                align-items: center;
-
-                input,
-                select {
-                    width: 100% ;
-                    margin: 5px ;
-                }
-            }
-
-            .Ex {
-                display: flex;
-                position: relative;
-                left: -25vh;
-                width: 35vh;
-                margin-top: 2vh;
-
-                flex-direction: row;
-
-                
-                    input{
-                        width: 10px;
-                    }
-            }
-        }
-
-        button {
-            width: 90%;
-            margin: 20px auto;
-            display: block;
-        }
+      .pageatual {
+        width: 90%;
+        padding: 0.8rem;
+        font-size: 1rem;
+      }
     }
+
+    .cadastro {
+      width: 95%;
+      margin: 1rem auto;
+      padding: 1rem;
+
+      .box, .box1, .box2, .box3 {
+        flex-direction: column;
+        align-items: center;
+
+        input, select {
+          width: 100% !important;
+          margin: 0.5rem 0;
+        }
+      }
+
+      .Ex {
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+
+    button {
+      width: 90%;
+      font-size: 1rem;
+    }
+  }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
-    .container {
-        .cadastro {
-            width: 90%;
-            margin: 5vh auto;
-            height: auto;
+/* ----------- TABLET ----------- */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .container {
+    .cadastro {
+      width: 90%;
+      margin: 2rem auto;
+      padding: 1.5rem;
 
-            .box,
-            .box1,
-            .box2,
-            .box3 {
+      .box, .box1, .box2, .box3 {
+        flex-direction: column;
+        align-items: center;
 
-                input,
-                select {
-                    width: 100% !important;
-                }
-            }
+        input, select {
+          width: 100% !important;
+          margin: 0.5rem 0;
         }
-
-        button {
-            width: 70%;
-            margin: 30px auto;
-            display: block;
-        }
+      }
     }
-}
 
+    button {
+      width: 70%;
+      margin: 1.5rem auto;
+    }
+  }
+}
