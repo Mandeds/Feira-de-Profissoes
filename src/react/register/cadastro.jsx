@@ -56,7 +56,7 @@ export default function Cadastro() {
   }
 
   return (
-    <div className="container">
+    <div className="container_cadastro">
       <header>
         <Link className="Link" to="/">
           <h1>Voltar</h1>
