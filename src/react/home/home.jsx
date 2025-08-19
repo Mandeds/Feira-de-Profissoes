@@ -58,7 +58,7 @@ export default function Home() {
                     </div>
 
                     <div className="cards_andares">
-                        <h2>Esforço que transforma 
+                        <h2>Esforço que transforma <br /> 
                     e orgulho permanece</h2>
                         <img src="/src/assets/images/freibg.png" />
                         <h3>PRIMEIRO ANDAR</h3>
