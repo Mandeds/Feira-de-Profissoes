@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Sobre() {
 
     return (
-        <div className="container">
+        <div className="container_sobre">
             <header>
                 <Link className="Link" to="/">
                     <h1>Voltar</h1>
