@@ -3,7 +3,7 @@
   background: #fff;
   min-height: 100vh;
   background-color: #0E004D;
-  
+
 
   header {
     display: flex;
@@ -41,10 +41,10 @@
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    background: linear-gradient(to bottom, 
-    #0E004D 0%, 
-    #6783FD 50%, 
-    #FFC857 100%);
+    background: linear-gradient(to bottom,
+        #0E004D 0%,
+        #6783FD 50%,
+        #FFC857 100%);
     height: 60vh;
 
     h2.texto1 {
@@ -55,94 +55,137 @@
       text-align: center;
     }
 
-    
+
   }
 
   .andar1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #FFFFFF;
+    background: linear-gradient(#FFC857, #fff);
+
+    .teste {
+      position: relative;
+      color: #4A57DC;
+      left: 20vh;
+      top: -10vh;
+    }
+
+
+    h1 {
+      font-size: 4rem;
+      margin-right: 50vh;
+      color: #4A57DC;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    /* Caixa azul com laterais amarelas */
+    .bloco {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: #8FA2F6;
+      border-radius: 20px;
+      margin-bottom: 40px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        width: 40px;
+        height: 160px;
+        right: -50px;
+        background: #FFC857;
+        border-radius: 20px;
+      }
+
+      &::before {
+        left: -50px;
+      }
+
+      &::after {
+        right: -50px;
+      }
+    }
+
+    .cursomae {
+      display: flex;
+    }
+
+    /* Botões lado direito */
+    .botoes {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 100%;
-      background-color: #FFFFFF;
-      background: linear-gradient(#FFC857 , #fff );
+      gap: 20px;
 
-      .teste{
-        position: relative;
-        color: #4A57DC;
-        left: 20vh;
-        top: -10vh;
-      }
-      
+      .curso {
+        background: #0E004D;
+        margin-left: 50vh;
 
-      h1 {
-        font-size: 4rem;
-        margin-right: 50vh;
-        color: #4A57DC;
+        color: #fff;
+        font-weight: bold;
         text-align: center;
-        margin-bottom: 50px;
+        padding: 15px 40px;
+        border-radius: 15px;
+        cursor: pointer;
       }
 
-      /* Caixa azul com laterais amarelas */
-      .bloco {
-        position: relative;
-        width: 300px;
-        height: 200px;
-        background: #8FA2F6;
-        border-radius: 20px;
-        margin-bottom: 40px;
+      .informacaocurso {
+        background: #E0E0E0;
+        margin-left: 50vh;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px 40px;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
 
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          top: 20px;
-          width: 40px;
-          height: 160px;
-          right: -50px;
-          background: #FFC857;
-          border-radius: 20px;
-        }
 
-        &::before {
-          left: -50px;
-        }
 
-        &::after {
-          right: -50px;
-        }
+@media (max-width: 600px){
+  .container_sobre {
+    header {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.8rem;
+      text-align: center;
+
+      .pageatual {
+        width: 50%;
+        padding: 0.8rem;
+        font-size: 1rem;
+      }
+    }
+
+    .andar1{
+      h1{
+        font-size: 2rem;
+        padding-left: 35vh;
       }
 
       .cursomae{
         display: flex;
-      }
-      /* Botões lado direito */
-      .botoes {
-        display: flex;
         flex-direction: column;
-        gap: 20px;
 
-        .curso {
-          background: #0E004D;
-          margin-left: 50vh;
-          
-          color: #fff;
-          font-weight: bold;
-          text-align: center;
-          padding: 15px 40px;
-          border-radius: 15px;
-          cursor: pointer;
-        }
+          .bloco{ 
+            margin-left: 17vh;
+            margin-top: -10vh;
+          }
 
-        .informacaocurso {
-          background: #E0E0E0;
-          margin-left: 50vh;
-          color: #333;
-          font-weight: bold;
-          text-align: center;
-          padding: 15px 40px;
-          border-radius: 15px;
-          cursor: pointer;
-        }
+          .botoes{
+            position: relative;
+            left: -25vh;
+          }
       }
+      
     }
+}
 }

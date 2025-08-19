@@ -25,7 +25,7 @@ export default function Home() {
                     <div id="quadrado_inicio">
 
                         <div className="links">
-                            <strong><a href="#">INICIO</a></strong>
+                            <strong><a href="#">Cursos</a></strong>
                             <strong><Link to={'/Sobre'}>SOBRE</Link></strong>
                             <strong><a href="#">CONTATO</a></strong>
                         </div>

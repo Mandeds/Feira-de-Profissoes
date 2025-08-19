@@ -29,7 +29,7 @@ export default function Sobre() {
                     
 
                     <div className="cursomae">
-                    <div className="bloco"></div>
+                        <div className="bloco"></div>
 
                     <div className="botoes">
                         <div className="curso">
