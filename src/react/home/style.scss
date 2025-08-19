@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container_home {
-    background-image: linear-gradient(to bottom, #12368E , #F7B73B );
+    background-image: linear-gradient(to bottom, #12368E 50%, #F7B73B);
+    height: 1000px;
 }
 
 header {
@@ -15,7 +17,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
 }
 
 header img:nth-child(1) {
@@ -32,6 +34,8 @@ header img:nth-child(3):hover {
 }
 
 
+
+
 .link {
     text-decoration: none;
     background-color: #F4BF50;
@@ -42,6 +46,7 @@ header img:nth-child(3):hover {
     border-radius: 36px 0px 0px 36px;
     transition: all 0.3s ease-in-out;
 }
+
 .link1 {
     text-decoration: none;
     background-color: #F4BF50;
@@ -60,12 +65,110 @@ header img:nth-child(3):hover {
 
 /* SECTION PRINCIPAL */
 
-.container_principal img {
-    height: 230px;
-    background-color: rgba(255, 255, 255, 0.3); /* fundo semi-transparente */
-    border-radius: 15px;
-    backdrop-filter: blur(10px); /* efeito acrílico */
-    -webkit-backdrop-filter: blur(10px); /* para compatibilidade com Safari */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* opcional: borda suave */
+
+
+.container_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.container_principal>.feira {
+    height: 230px;
+    margin-top: 45px;
+    margin-left: 35px;
+    padding-right: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* fundo semi-transparente */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    /* efeito acrílico */
+    -webkit-backdrop-filter: blur(10px);
+    /* para compatibilidade com Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* opcional: borda suave */
+
+}
+
+.container_principal button {
+    border-radius: 20px;
+    height: 3rem;
+    width: 7rem;
+    color: #21158C;
+    margin: 0 1.2rem;
+    border: none;
+    border: #EFB657;
+}
+
+.container_main {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.horario {
+    font-weight: 900;
+    font-size: 50pt;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1.5rem;
+    color: #ffa200;
+}
+
+.informacoes>h3 {
+    color: white;
+    font-family: "Roboto";
+    margin-bottom: 3rem;
+}
+
+.informacoes>.andares {
+    padding: 1rem 8.4rem;
+    background-color: #21158C;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+
+}
+
+
+// container_secundaria
+
+.container_secundaria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_secundaria > .card_instituto { 
+    background-color: #275BD5;
+    padding: .6rem .9rem;
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20pt;
+    margin-top: 2rem;
+    z-index: 1000;
+}
+
+.container_secundaria > .card_instituto > .card_interno{
+    padding: 0.9rem 5.8rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
+}
+.container_secundaria > .cards_andares { 
+    background-color: #FFE8BD;
+    height: 30rem;
+    padding: 3rem;
+    margin-top: -50px;
+}
+
+.container_secundaria > .cards_andares h2 {
+    font-family: "arial", sans-serif;
+    font-weight: lighter;
+    color: #10338D;
+    text-align: center;
+    padding-top: 2rem ;
+}
+
+.container_secundaria > .cards_andares > img{
+    height: 400px;
+}
