@@ -62,8 +62,11 @@ export default function Home() {
                     e orgulho permanece</h2>
                         <img src="/src/assets/images/freibg.png" />
                         <h3>PRIMEIRO ANDAR</h3>
-                        <Link to="">Curso</Link>
-                        <Link to="">Informação</Link>
+
+                        <div className="links">
+                            <Link className="Link2" to="">Curso</Link>
+                            <Link className="Link3" to="">Informação</Link>
+                        </div>
                     </div>
                 </section>
 
