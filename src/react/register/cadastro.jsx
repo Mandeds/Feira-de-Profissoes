@@ -82,8 +82,9 @@ export default function Cadastro() {
         <div className="box">
           <h2>Email:</h2>
           <input
+          className="emailInput"
             type="email"
-            placeholder="pedroalberto@gmail.com"
+            placeholder="pedroalber@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -136,20 +137,23 @@ export default function Cadastro() {
           <div className="Ex">
             <h3>
               Ex-Aluno?
+            </h3>
               <input
+                className="checkbox"
                 type="checkbox"
                 checked={exAluno}
                 onChange={(e) => setExAluno(e.target.checked)}
               />{" "}
-              Sim
-            </h3>
+
+              <h3>Sim</h3>
+            
           </div>
         </div>
 
         <div className="datehappybirthday">
           <h3>Data de Nasc.</h3>
           <input
-            type="date"
+            type="date" 
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required

@@ -1,6 +1,6 @@
 import "./sobre.scss";
 import "../global.scss";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export default function Sobre() {
 
@@ -23,7 +23,26 @@ export default function Sobre() {
 
             </section>
 
-             <section className="andar1">
+            <section className="patio">
+                    <h1>Patio</h1>
+                    
+                    
+
+                    <div className="cursomae">
+                        <div className="bloco"></div>
+
+                    <div className="botoes">
+                        <div className="curso">
+                            <h3>CURSO</h3>
+                        </div>
+                        <div className="informacaocurso">
+                            <h3><Link to={'/patio'}> INFORMAÇÃO </Link></h3>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <section className="andar1">
                     <h1>PRIMEIRO</h1>
                     <h1 className="teste">ANDAR</h1>
                     
@@ -36,7 +55,7 @@ export default function Sobre() {
                             <h3>CURSO</h3>
                         </div>
                         <div className="informacaocurso">
-                            <h3>INFORMAÇÃO</h3>
+                            <h3><Link to={'/andar1'}> INFORMAÇÃO </Link></h3>
                         </div>
                     </div>
                     </div>

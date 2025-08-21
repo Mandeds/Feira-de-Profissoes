@@ -4,68 +4,70 @@ import { Link } from "react-router";
 
 export default function Home() {
     return (
-        <div className="tudo">
-            <main>
-                <header className="header_inicio">
-                    <div className="vemprofrei">
-                        <h1 className="texto-letras">
-                            <span>V</span>
-                            <span>E</span>
-                            <span>M</span>
-                            <span>P</span>
-                            <span>R</span>
-                            <span>O</span>
-                            <span>F</span>
-                            <span>R</span>
-                            <span>E</span>
-                            <span>I</span>
-                        </h1>
+        <div className="container_home">
+
+            <header>
+                <img src="/src/assets/images/vemprofrei.png" alt="Vem pro Frei" />
+                    <nav className="navegar">
+                        <Link className="link">Contatos</Link>
+                        <Link className="link1" to={'/sobre'}>Sobre</Link>
+                    </nav>
+                <img src="/src/assets/images/lupa (1).png" alt="" /> 
+            </header>
+
+
+            <main className="container_main">
+
+                <section className="container_principal">
+                    <img className="feira" src="/src/assets/images/Group6.png" alt="" />
+        <br />
+                    <div className="botoes">
+                        <button>
+                            <strong><Link to={'/cadastro'}>CADASTRO</Link></strong>
+                        </button>
+                        
+                        <button>
+                            <strong><Link to={'/Login'}>LOGIN</Link></strong>
+                        </button>
+                    </div>
+            
+                    <h1 className="horario" >20:00:00:00</h1>
+
+                    <div className="carrossel">
+                        <img src="" />
+                        <img src="" />
+                        <img src="" />
+                        <img src="" />
                     </div>
 
-                    <div id="quadrado_inicio">
+                    <div className="informacoes">
+                        <h3>VEJA NOSSAS OUTRAS PLATAFORMAS</h3>
+                        {/* AO SELECIONAR OS ANDARES A IMAGEM AO LADO TRCA DE ACORDO COM A OPÇÂO*/}
+                        <Link className="andares" >ANDARES</Link>
+                    </div>
+                </section> 
 
-                        <div className="links">
-                            <strong><a href="#">Cursos</a></strong>
-                            <strong><Link to={'/Sobre'}>SOBRE</Link></strong>
-                            <strong><a href="#">CONTATO</a></strong>
+
+                 {/* separação de conteúdos */}
+
+                <section className="container_secundaria">
+                    <div className="card_instituto">
+                        <div className="card_interno">
+                            <h1>INSTITUTO</h1>
                         </div>
-                        <div id="quadrado_pequeno">
-                            <div id="quadrado_borda">
-                                <img
-                                    id="imagens_inicio"
-                                    src="src/assets/images/WhatsApp_Image_2025-07-29_at_16-removebg-preview 2.png"
-                                    alt="Ícone"
-                                />
-                            </div>
-                        </div>
-
-                        <div id="maior">
-                            <img
-                                id="Logo_inicio"
-                                src="src/assets/images/Group6.png"
-                                width="450px"
-                                alt="Logo"
-                            />
-                        </div>
-                    </div>
-                    <div className="botao">
-                        {/* O caminho não é do arquivo é das rotas que foram previamente configuradas no arquivo routes.jsx */}
-                        <Link to={"/cadastro"}>Cadastro</Link>
-                        <Link to={"/login"}>Login</Link>
-                    </div>
-                </header>
-                <section className="pagina"></section>
-                <div className='carrossel'>
-
-                    <div className='carrossel__item'>
-                        <img src="./src/assets/images/Rectangle 64.png" alt="Imagem 3" />
                     </div>
 
-                </div>
+                    <div className="cards_andares">
+                        <h2>Esforço que transforma <br /> 
+                    e orgulho permanece</h2>
+                        <img src="/src/assets/images/freibg.png" />
+                        <h3>PRIMEIRO ANDAR</h3>
+                        <Link to="">Curso</Link>
+                        <Link to="">Informação</Link>
+                    </div>
+                </section>
+
             </main>
-            <div className="final">
-                <p>a</p>
-            </div>
         </div>
     );
 }

@@ -58,13 +58,14 @@
 
   }
 
-  .andar1 {
+
+  .patio {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background-color: #FFFFFF;
-    background: linear-gradient(#FFC857, #fff);
+    background: linear-gradient(#FFC857 10%, #fff 0%);
 
     .teste {
       position: relative;
@@ -146,11 +147,106 @@
       }
     }
   }
+
+
+  .andar1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.1px;
+    background-color: #FFFFFF;
+    background: linear-gradient(#fff , #FFC857 60%);
+
+    .teste {
+      position: relative;
+      color: #4A57DC;
+      left: 45vh;
+      top: -15vh;
+
+    }
+
+
+    h1 {
+      font-size: 4rem;
+      margin-top: 5%;
+      margin-right: 50vh;
+      position: relative;
+      right: -60vh;
+      color: #4A57DC;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    /* Caixa azul com laterais amarelas */
+    .bloco {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: #8FA2F6;
+      border-radius: 20px;
+      margin-bottom: 40px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        width: 40px;
+        height: 160px;
+        right: -50px;
+        background: #FFC857;
+        border-radius: 20px;
+      }
+
+      &::before {
+        left: -50px;
+      }
+
+      &::after {
+        right: -50px;
+      }
+    }
+
+    .cursomae {
+      display: flex;
+    }
+
+    /* Botões lado direito */
+    .botoes {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .curso {
+        background: #0E004D;
+        margin-left: 50vh;
+
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px 40px;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      .informacaocurso {
+        background: #E0E0E0;
+        margin-left: 50vh;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px 40px;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .container_sobre {
     header {
       display: flex;
@@ -165,27 +261,27 @@
       }
     }
 
-    .andar1{
-      h1{
+    .andar1 {
+      h1 {
         font-size: 2rem;
         padding-left: 35vh;
       }
 
-      .cursomae{
+      .cursomae {
         display: flex;
         flex-direction: column;
 
-          .bloco{ 
-            margin-left: 17vh;
-            margin-top: -10vh;
-          }
+        .bloco {
+          margin-left: 17vh;
+          margin-top: -10vh;
+        }
 
-          .botoes{
-            position: relative;
-            left: -25vh;
-          }
+        .botoes {
+          position: relative;
+          left: -25vh;
+        }
       }
-      
+
     }
-}
+  }
 }

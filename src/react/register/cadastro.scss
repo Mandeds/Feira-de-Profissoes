@@ -41,12 +41,15 @@
     border-radius: 1rem;
     min-height: 70vh;
 
-    .box, .box1, .box2, .box3 {
+    .box,
+    .box1,
+    .box2 {
       display: flex;
       align-items: center;
       margin-top: 1.5rem;
 
-      input, select {
+      input,
+      select {
         height: 2.2rem;
         border-radius: 5px;
         padding-left: 0.5rem;
@@ -63,8 +66,37 @@
       }
     }
 
-    .box1 input { max-width: 90%; }
-    .box3 select { max-width: 70%; }
+    .box3 {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5rem;
+
+
+      select {
+        height: 2.2rem;
+        border-radius: 5px;
+        padding-left: 0.5rem;
+        margin-left: 1rem;
+        width: 100%;
+        max-width: 40%;
+        background-color: #D9D9D9;
+        border: 1px solid #000000;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      select {
+        background-color: #D9D9D9;
+      }
+
+    }
+
+    .box1 input {
+      max-width: 90%;
+    }
+
+    .box3 select {
+      max-width: 70%;
+    }
 
     .Ex {
       display: flex;
@@ -72,7 +104,9 @@
       font-size: 1rem;
       align-items: center;
 
-      h3 { padding-left: 1rem; }
+      h3 {
+        padding-left: 1rem;
+      }
     }
   }
 
@@ -102,36 +136,61 @@
 @media (max-width: 600px) {
   .container {
     header {
-      flex-direction: column;
+      flex-direction: row;
       font-size: 0.8rem;
       text-align: center;
+      align-items: baseline;
 
       .pageatual {
-        width: 90%;
+        width: 40%;
         padding: 0.8rem;
-        font-size: 1rem;
+        height: 10%;
+        font-size: 0.7rem;
+
+        img {
+          margin-top: 10px;
+        }
       }
     }
 
     .cadastro {
-      width: 95%;
+      width: 96%;
       margin: 1rem auto;
       padding: 1rem;
 
-      .box, .box1, .box2, .box3 {
+      .box,
+      .box1,
+      .box2,
+      .box3 {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        
 
-        input, select {
+        input,
+        select {
           width: 100% !important;
-          margin: 0.5rem 0;
+          max-width: 100% !important;
+          margin-left: 0;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
         }
+      }
+
+      /* Estilo específico para o input de email */
+      .emailInput {
+        width: 100% !important;
+        max-width: 100% !important;
       }
 
       .Ex {
         justify-content: space-between;
         width: 100%;
+        flex-direction: row;
         margin-top: 0.5rem;
+
+        input{
+          height: 30px;
+        }
       }
     }
 
@@ -150,13 +209,35 @@
       margin: 2rem auto;
       padding: 1.5rem;
 
-      .box, .box1, .box2, .box3 {
+      .box,
+      .box1,
+      .box2,
+      .box3 {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
 
-        input, select {
+        input,
+        select {
           width: 100% !important;
+          max-width: 100% !important;
           margin: 0.5rem 0;
+        }
+      }
+
+      /* Garantir que o emailInput também se comporte bem em tablet */
+      .emailInput {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .Ex {
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row;
+        margin-top: 0.5rem;
+
+        input{
+          height: 30px;
         }
       }
     }
