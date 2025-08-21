@@ -1,8 +1,47 @@
 import "./style.scss";
 import "../global.scss";
 import { Link } from "react-router";
+import React, { useEffect, useState } from 'react';
 
-export default function Home() {
+
+export default function Home() {const targetDate = new Date('2025-09-29T23:59:59'); // Coloque DENTRO do componente
+    const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
+  
+    function getTimeRemaining() {
+      const now = new Date();
+      const total = targetDate - now;
+  
+      if (total <= 0) {
+        return {
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        };
+      }
+  
+      const seconds = Math.floor((total / 1000) % 60);
+      const minutes = Math.floor((total / 1000 / 60) % 60);
+      const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  
+      return {
+        days,
+        hours,
+        minutes,
+        seconds
+      };
+    }
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTimeLeft(getTimeRemaining());
+      }, 1000);
+  
+      return () => clearInterval(interval); // Cleanup do intervalo
+    }, []);
+  
+
     return (
         <div className="container_home">
 
@@ -31,7 +70,9 @@ export default function Home() {
                         </button>
                     </div>
             
-                    <h1 className="horario" >20:00:00:00</h1>
+      <h1 className="horario"> 
+        {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
+      </h1>
 
                     <div className="carrossel">
                         <img src="" />
@@ -71,3 +112,4 @@ export default function Home() {
         </div>
     );
 }
+
