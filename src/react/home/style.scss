@@ -113,7 +113,7 @@ header img:nth-child(3):hover {
     display: flex;
     gap: 2rem;
     margin-top: 3rem;
-    
+
 }
 
 .horario {
@@ -150,7 +150,7 @@ header img:nth-child(3):hover {
 
 // container_secundaria
 
-.container_secundaria{
+.container_secundaria {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,7 +158,7 @@ header img:nth-child(3):hover {
 
 }
 
-.container_secundaria > .card_instituto { 
+.container_secundaria>.card_instituto {
     background-color: #275BD5;
     padding: .6rem .9rem;
     border-radius: 15px;
@@ -169,12 +169,13 @@ header img:nth-child(3):hover {
     z-index: 1000;
 }
 
-.container_secundaria > .card_instituto > .card_interno{
+.container_secundaria>.card_instituto>.card_interno {
     padding: 0.9rem 5.8rem;
     border-radius: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
 }
-.container_secundaria > .cards_andares { 
+
+.container_secundaria>.cards_andares {
     background-color: #FFE8BD;
     width: 100%;
     height: 47rem;
@@ -183,17 +184,17 @@ header img:nth-child(3):hover {
     border-radius: 40px 0px 0px 40px;
 }
 
-.container_secundaria > .cards_andares h2 {
+.container_secundaria>.cards_andares h2 {
     font-family: "arial", sans-serif;
     font-weight: lighter;
     color: #10338D;
     text-align: center;
-    padding-top: 2rem ;
+    padding-top: 2rem;
 }
 
 .redesSociais {
-    margin-top: 8rem;
-    margin-right: 4rem;
+    position: absolute;
+    margin-left: 22rem;
 }
 
 .redesSociais img {
