@@ -103,8 +103,11 @@ export default function Home() {const targetDate = new Date('2025-09-29T23:59:59
                     e orgulho permanece</h2>
                         <img src="/src/assets/images/freibg.png" />
                         <h3>PRIMEIRO ANDAR</h3>
-                        <Link to="">Curso</Link>
-                        <Link to="">Informação</Link>
+
+                        <div className="links">
+                            <Link className="Link2" to="">Curso</Link>
+                            <Link className="Link3" to="">Informação</Link>
+                        </div>
                     </div>
                 </section>
 
