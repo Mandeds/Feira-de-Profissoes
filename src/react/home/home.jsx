@@ -91,8 +91,6 @@ function mudarTituloTres(){
         { id: 4, src: '/src/assets/images/carol.png', alt: 'Foto 4' },
       ];
 
-    const targetDate = new Date('2025-09-29T23:59:59'); // Coloque DENTRO do componente
-    const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
   
     function getTimeRemaining() {
       const now = new Date();
