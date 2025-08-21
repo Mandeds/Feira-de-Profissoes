@@ -4,7 +4,8 @@ import { Link } from "react-router";
 import React, { useEffect, useState } from 'react';
 
 
-export default function Home() {const targetDate = new Date('2025-09-29T23:59:59'); // Coloque DENTRO do componente
+export default function Home() {
+    const targetDate = new Date('2025-09-29T23:59:59'); // Coloque DENTRO do componente
     const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
   
     function getTimeRemaining() {
