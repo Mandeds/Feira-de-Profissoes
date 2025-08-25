@@ -5,8 +5,6 @@
             #6783FD 50%,
             #FFC857 100%);
     text-shadow: 1px 2px 3px black;
-
-
     height: 857px;
     position: fixed;
     width: 100%;
@@ -17,6 +15,7 @@
         padding: 1rem 2rem;
         border-radius: 0 0 1rem 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        align-items: center;
 
         .Link {
             color: #fff;
@@ -38,9 +37,8 @@
             align-items: center;
             justify-content: center;
             background-color: #FFC857;
-            padding: 1rem;
+            margin-left: 30%;
             font-size: 1.2rem;
-            margin-right: 30%;
             box-shadow: -1.5px 2.5px 4px black;
         }
     }

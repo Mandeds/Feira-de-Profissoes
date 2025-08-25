@@ -4,31 +4,22 @@ import { Link } from "react-router";
 
 export default function Home() {
     return (
-        <div className="container_home">
-
-            <header>
-                <img src="/src/assets/images/vemprofrei.png" alt="Vem pro Frei" />
-                    <nav className="navegar">
-                        <Link className="link">Contatos</Link>
-                        <Link className="link1" to={'/sobre'}>Sobre</Link>
-                    </nav>
-                <img src="/src/assets/images/lupa (1).png" alt="" /> 
-            </header>
-
-
-            <main className="container_main">
-
-                <section className="container_principal">
-                    <img className="feira" src="/src/assets/images/Group6.png" alt="" />
-        <br />
-                    <div className="botoes">
-                        <button>
-                            <strong><Link to={'/cadastro'}>CADASTRO</Link></strong>
-                        </button>
-                        
-                        <button>
-                            <strong><Link to={'/Login'}>LOGIN</Link></strong>
-                        </button>
+        <div className="tudo">
+            <main>
+                <header className="header_inicio">
+                    <div className="vemprofrei">
+                        <h1 className="texto-letras">
+                            <span>V</span>
+                            <span>E</span>
+                            <span>M</span>
+                            <span>P</span>
+                            <span>R</span>
+                            <span>O</span>
+                            <span>F</span>
+                            <span>R</span>
+                            <span>E</span>
+                            <span>I</span>
+                        </h1>
                     </div>
             
                     <h1 className="horario" >20:00:00:00</h1>
