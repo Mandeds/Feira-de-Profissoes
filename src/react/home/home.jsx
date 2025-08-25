@@ -147,11 +147,11 @@ export default function Home() {
                     <br />
                     <div className="botoes">
                         <button>
-                            <strong>CADASTRO</strong>
+                       <Link to={'/cadastro'} > CADASTRO </Link>
                         </button>
 
                         <button>
-                            <strong>LOGIN</strong>
+                           <Link  to={'/login'}> LOGIN </Link>
                         </button>
                     </div>
 
