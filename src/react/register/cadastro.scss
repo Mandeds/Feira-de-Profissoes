@@ -1,6 +1,7 @@
 /* ----------- ESTILO BASE (comum a todos) ----------- */
 .container-cadastro {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   header {
     display: flex;
@@ -19,7 +20,7 @@
 
     .pageatual {
       display: flex;
-      border: 2px solid #FFFFFF;
+      border: 2px solid #fff;
       width: 50%;
       border-radius: 3rem;
       align-items: center;
@@ -46,23 +47,35 @@
     .box2 {
       display: flex;
       align-items: center;
+      justify-content: center;
       margin-top: 1.5rem;
+
+      
+
+      .School {
+        margin-left: 4%;
+      }
+
+      .phone {
+        margin-left: 3%;
+      }
+
+      .emailInput{
+        
+        width: 86.5%;
+      }
 
       input,
       select {
         height: 2.2rem;
         border-radius: 5px;
         padding-left: 0.5rem;
-        margin-left: 1rem;
+        margin-left: 3%;
         width: 100%;
         max-width: 40%;
         background-color: #D9D9D9;
-        border: 1px solid #000000;
+        border: 1px solid #000;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
-
-      select {
-        background-color: #D9D9D9;
       }
     }
 
@@ -71,31 +84,25 @@
       align-items: center;
       margin-top: 1.5rem;
 
-
       select {
         height: 2.2rem;
         border-radius: 5px;
         padding-left: 0.5rem;
         margin-left: 1rem;
-        width: 100%;
+        width: 60%;
         max-width: 40%;
         background-color: #D9D9D9;
-        border: 1px solid #000000;
+        border: 1px solid #000;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
-
-      select {
-        background-color: #D9D9D9;
-      }
-
     }
 
     .box1 input {
-      max-width: 90%;
+      max-width: 100%;
     }
 
     .box3 select {
-      max-width: 70%;
+      max-width: 100%;
     }
 
     .Ex {
@@ -164,7 +171,6 @@
       .box3 {
         flex-direction: column;
         align-items: flex-start;
-        
 
         input,
         select {
@@ -176,7 +182,6 @@
         }
       }
 
-      /* Estilo específico para o input de email */
       .emailInput {
         width: 100% !important;
         max-width: 100% !important;
@@ -188,7 +193,7 @@
         flex-direction: row;
         margin-top: 0.5rem;
 
-        input{
+        input {
           height: 30px;
         }
       }
@@ -224,7 +229,6 @@
         }
       }
 
-      /* Garantir que o emailInput também se comporte bem em tablet */
       .emailInput {
         width: 100% !important;
         max-width: 100% !important;
@@ -236,7 +240,7 @@
         flex-direction: row;
         margin-top: 0.5rem;
 
-        input{
+        input {
           height: 30px;
         }
       }

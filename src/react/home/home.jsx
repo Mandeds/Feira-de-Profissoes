@@ -1,65 +1,87 @@
 import "./style.scss";
 import "../global.scss";
-import { Link } from "react-router-dom"; // corrigido
+import { Link } from "react-router";
 import React, { useEffect, useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay, EffectFade } from 'swiper/modules';
 
+
 export default function Home() {
     const targetDate = new Date('2025-09-29T23:59:59');
+    const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
 
     function getTimeRemaining() {
         const now = new Date();
         const total = targetDate - now;
 
         if (total <= 0) {
-            return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+            return {
+                days: 0,
+                hours: 0,
+                minutes: 0,
+            };
         }
 
-        const seconds = Math.floor((total / 1000) % 60);
         const minutes = Math.floor((total / 1000 / 60) % 60);
         const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
         const days = Math.floor(total / (1000 * 60 * 60 * 24));
 
-        return { days, hours, minutes, seconds };
+        return {
+            days,
+            hours,
+            minutes,
+        };
     }
 
-    const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
-
     useEffect(() => {
+        // Atualiza imediatamente ao montar o componente
+        setTimeLeft(getTimeRemaining());
+
         const interval = setInterval(() => {
             setTimeLeft(getTimeRemaining());
-        }, 1000);
+        }, 60000); // Atualiza a cada 60.000ms (1 minuto)
+
         return () => clearInterval(interval);
     }, []);
 
+
     const [titulo, setTitulo] = useState("ANDARES");
-    const [src, setSrc] = useState("/src/assets/images/freibg.png");
+    const [patio, setPatio] = useState("Pátio");
+    const [umAndar, setumandar] = useState("1° Andar");
+    const [doisAndar, setdoisndar] = useState("2° Andar");
+    const [tresAndar, settresndar] = useState("3° Andar");
+
+    let [src, setSrc] = useState("/src/assets/images/freibg.png")
+
 
     function voltarTitulo() {
-        setTitulo("ANDARES");
-        setSrc("/src/assets/images/freibg.png");
+        setTitulo("ANDARES")
+        setSrc("/src/assets/images/freibg.png")
     }
 
     function mudarTituloPatio() {
-        setTitulo("Pátio");
-        setSrc("/src/assets/images/patio.png"); // coloque uma imagem válida
-    }
+        let valor = patio
+        setTitulo(valor)
 
+        setSrc("")
+
+
+    }
     function mudarTituloPrimeiro() {
-        setTitulo("1° Andar");
-        setSrc("/src/assets/images/andar1.png");
-    }
+        let valor = umAndar
+        setTitulo(valor)
 
+    }
     function mudarTituloDois() {
-        setTitulo("2° Andar");
-        setSrc("/src/assets/images/andar2.png");
-    }
+        let valor = doisAndar
+        setTitulo(valor)
 
+    }
     function mudarTituloTres() {
-        setTitulo("3° Andar");
-        setSrc("/src/assets/images/andar3.png");
+        let valor = tresAndar
+        setTitulo(valor)
+
     }
 
     const imagens = [
@@ -69,27 +91,72 @@ export default function Home() {
         { id: 4, src: '/src/assets/images/carol.png', alt: 'Foto 4' },
     ];
 
+
+    function getTimeRemaining() {
+        const now = new Date();
+        const total = targetDate - now;
+
+        if (total <= 0) {
+            return {
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 0
+            };
+        }
+
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+        const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+        return {
+            days,
+            hours,
+            minutes,
+            seconds
+        };
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTimeLeft(getTimeRemaining());
+        }, 1000);
+
+        return () => clearInterval(interval); // Cleanup do intervalo
+    }, []);
+
+
     return (
         <div className="container_home">
+
             <header>
                 <img src="/src/assets/images/vemprofrei.png" alt="Vem pro Frei" />
                 <nav className="navegar">
-                    <Link className="link" to="/contatos">Contatos</Link>
-                    <Link className="link1" to="/sobre">Sobre</Link>
+                    <Link className="link">Contatos</Link>
+                    <Link className="link1" to={'/sobre'}>Sobre</Link>
                 </nav>
-                <img src="/src/assets/images/lupa (1).png" alt="Buscar" />
+                <img src="/src/assets/images/lupa (1).png" alt="" />
             </header>
 
+
             <main className="container_main">
+
                 <section className="container_principal">
-                    <img className="feira" src="/src/assets/images/Group6.png" alt="Feira" />
+                    <img className="feira" src="/src/assets/images/Group6.png" alt="" />
+                    <br />
                     <div className="botoes">
-                        <Link to="/cadastro" className="botao">CADASTRO</Link>
-                        <Link to="/login" className="botao">LOGIN</Link>
+                        <button>
+                       <Link to={'/cadastro'} > CADASTRO </Link>
+                        </button>
+
+                        <button>
+                           <Link  to={'/login'}> LOGIN </Link>
+                        </button>
                     </div>
 
                     <h1 className="horario">
-                        {timeLeft.days} Dias {timeLeft.hours} Horas {timeLeft.minutes} Min {timeLeft.seconds}s
+                        {timeLeft.days} Dias {timeLeft.hours} Horas {timeLeft.minutes} Minutos
                     </h1>
 
                     <div style={{ width: '100%', maxWidth: 900, margin: '0 auto' }}>
@@ -103,14 +170,29 @@ export default function Home() {
                             speed={600}
                             spaceBetween={16}
                             slidesPerView={1}
-                            style={{ borderRadius: 16, overflow: 'hidden', height: "300px" }} // altura corrigida
+                            style={{ borderRadius: 16, overflow: 'hidden' }}
                         >
                             {imagens.map((img) => (
-                                <SwiperSlide key={img.id}>
+                                <SwiperSlide
+                                    key={img.id}
+                                    style={{
+                                        width: "100%",        // ocupa toda a largura do container
+                                        height: 100,          // altura fixa para todas as imagens
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        backgroundColor: "#000" // fundo para quando a imagem não cobre 100%
+                                    }}
+                                >
                                     <img
                                         src={img.src}
                                         alt={img.alt}
-                                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                            objectFit: "cover", // preenche todo o slide mantendo proporção
+                                            display: "block"
+                                        }}
                                         loading="lazy"
                                     />
                                 </SwiperSlide>
@@ -121,39 +203,57 @@ export default function Home() {
                     <div className="informacoes">
                         <h2>ESTAMOS NA CONTAGEM REGRESSIVA</h2>
                         <h2>PARA NOSSA FEIRA!</h2>
-                        <Link className="andares" onClick={voltarTitulo}>ANDARES</Link>
-                        <ul>
-                            <li onClick={mudarTituloPatio}>Pátio</li>
-                            <li onClick={mudarTituloPrimeiro}>1° Andar</li>
-                            <li onClick={mudarTituloDois}>2° Andar</li>
-                            <li onClick={mudarTituloTres}>3° Andar</li>
-                        </ul>
+                        {/* AO SELECIONAR OS ANDARES A IMAGEM AO LADO TRCA DE ACORDO COM A OPÇÂO*/}
+                        <Link className="andares" onClick={voltarTitulo} >ANDARES</Link>
+                        <div className="escolhas">
+                            <nav>
+                                <ul >
+                                    <li onClick={mudarTituloPatio} value={"Pátio"} >{patio}</li>
+                                    <li onClick={mudarTituloPrimeiro}>{umAndar}</li>
+                                    <li onClick={mudarTituloDois} >{doisAndar}</li>
+                                    <li onClick={mudarTituloTres}>{tresAndar}</li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </section>
 
+
+                {/* separação de conteúdos */}
+
                 <section className="container_secundaria">
                     <div className="card_instituto">
-                        <div className="card_interno"><h1>INSTITUTO</h1></div>
+                        <div className="card_interno">
+                            <h1>INSTITUTO</h1>
+                        </div>
                     </div>
-
-                    <div className="redesSociais">
-                        <a href="https://www.facebook.com/institutonsfatima/?locale=pt_BR"><img src="/src/assets/images/facebook (1).png" alt="Facebook" /></a>
-                        <a href="https://www.instagram.com/institutonsfatima/"><img src="/src/assets/images/instagram (1).png" alt="Instagram" /></a>
-                        <a href="https://www.tiktok.com/@institutonsfatima_"><img src="/src/assets/images/tik-tok.png" alt="TikTok" /></a>
-                        <a href="https://www.linkedin.com/company/institutonsfatima"><img src="/src/assets/images/linkedin (1).png" alt="LinkedIn" /></a>
-                        <a href="https://www.youtube.com/@institutosocialnossasenhor3548/videos"><img src="/src/assets/images/youtube.png" alt="YouTube" /></a>
+                    <div className="imagens">
+                        <div className="redesSociais">
+                            <a href="https://www.facebook.com/institutonsfatima/?locale=pt_BR"><img src="/src/assets/images/facebook (1).png" alt="" /></a>
+                            <a href="https://www.instagram.com/institutonsfatima/"><img src="/src/assets/images/instagram (1).png" alt="" /></a>
+                            <a href="https://www.tiktok.com/@institutonsfatima_?is_from_webapp=1&sender_device=pc"><img src="/src/assets/images/tik-tok.png" alt="" /></a>
+                            <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHo6NBiSWxmwgAAAZjMiYuY8UAuenq4Wu_PrYbf3TkLMyt9WUKsyz8mc7hK25at1IsWASK8zNXHXdQsGL-8MGEWfk5XzxfQYkpwKKH5uUF7I2XpsWpDaZJl4uPJPHqRFxa6kEM=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Finstitutonsfatima"><img src="/src/assets/images/linkedin (1).png" alt="" /></a>
+                            <a href="https://www.youtube.com/@institutosocialnossasenhor3548/videos"><img src="/src/assets/images/youtube.png" alt="" /></a>
+                        </div>
                     </div>
-
                     <div className="cards_andares">
-                        <h2>Esforço que transforma <br /> e orgulho permanece</h2>
-                        <img src={src} alt={titulo} />
+                        <h2>Esforço que transforma <br />
+                            e orgulho permanece</h2>
+                        <img src={src} />
+                        <div className="andares_fotos">
+
+                        </div>
                         <h3>{titulo}</h3>
+
+
+
                         <div className="links">
                             <Link className="Link2" to="">Curso</Link>
                             <Link className="Link3" to="/sobre">Informação</Link>
                         </div>
                     </div>
                 </section>
+
             </main>
         </div>
     );

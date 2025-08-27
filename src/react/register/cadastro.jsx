@@ -105,6 +105,7 @@ export default function Cadastro() {
           <h2>CPF:</h2>
           <input
             type="text"
+            className="CPF"
             placeholder="546.725.667-10"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
