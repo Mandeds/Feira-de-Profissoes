@@ -9,4 +9,4 @@ api.use(cors());
 adicionarRotas(api);
 
 
-api.listen(5001, () => console.log("Api subiu com sucesso na porta 5001"))
+api.listen(5001, () => console.log("Api subiu com sucesso na porta 5001"));
