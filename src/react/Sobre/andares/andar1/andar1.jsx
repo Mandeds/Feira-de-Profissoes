@@ -17,12 +17,14 @@ export default function andar1() {
 
             </header>
 
+<div className="informacoes-andar1">
             <img src="src/assets/images/image-removebg-preview 2.png" alt="" />
                     <div className="textos">
                         <h1>SALAS</h1>
                         <h2>• Sala 18: ADMINISTRAÇÃO - Empreendedorismo e Logística</h2>
                         <h2>• Sala 19: CREAS</h2>
                         <h2>• Sala 20: ADMINISTRAÇÃo - Recursos humanos, Contabilidade e Documentos Técnicos</h2>
+                    </div>
                     </div>
 
             

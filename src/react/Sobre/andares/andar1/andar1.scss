@@ -1,10 +1,12 @@
 .container-andar1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(to bottom,
-            #0E004D 0%,
-            #6783FD 50%,
-            #FFC857 100%);
+       background: linear-gradient(to bottom,
+        #0E004D 0%,
+        #6783FD 50%,
+        #FFC857 100%);
     text-shadow: 1px 2px 3px black;
+    
+
     height: 857px;
     position: fixed;
     width: 100%;
@@ -15,18 +17,10 @@
         padding: 1rem 2rem;
         border-radius: 0 0 1rem 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        align-items: center;
 
         .Link {
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, text-decoration 0.3s, color 0.3s;
-
-            &:hover {
-                text-decoration: underline;
-                transform: scale(1.08) translateY(-2px);
-            }
         }
 
         .pageatual-andar1 {
@@ -37,11 +31,82 @@
             align-items: center;
             justify-content: center;
             background-color: #FFC857;
-            margin-left: 30%;
+            padding: 1rem;
             font-size: 1.2rem;
+            margin-right: 30%;
             box-shadow: -1.5px 2.5px 4px black;
         }
     }
 
+    .informacoes-andar1 {
+        display: flex;
+        gap: 5%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        text-shadow: 1px 2px 3px black;
 
+        h1 {
+            color: #fff;
+            margin-bottom: 1rem;
+            
+        }
+
+        h2{
+            color: #ffffff 
+        }
+
+    }
+}
+
+
+@media (max-width: 768px) {
+  .container-andar1 {
+        header {
+            padding: 1rem;
+
+            .pageatual-andar1 {
+                width: 70%; 
+                margin: 0 auto;
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+        }
+
+        .informacoes-andar1 {
+            flex-direction: column; 
+            gap: 1rem;
+            margin-top: 2rem;
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container-andar1 {
+        header {
+            .pageatual-andar1 {
+                width: 90%;
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+        }
+
+        .informacoes-andar3 {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+        }
+    }
 }
