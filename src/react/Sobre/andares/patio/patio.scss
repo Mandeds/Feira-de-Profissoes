@@ -67,12 +67,14 @@
     .container-patio {
         header {
             padding: 1rem;
+            font-size: 0.6rem !important;
+            
 
             .pageatual-patio {
-                width: 70%; /* ocupa mais no mobile */
+                width: 70% !important; /* ocupa mais no mobile */
                 margin: 0 auto;
                 font-size: 1rem;
-                padding: 0.8rem;
+                
             }
         }
 

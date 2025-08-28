@@ -8,6 +8,7 @@ import Patio from "./Sobre/andares/patio/patio"
 import Andar1 from "./Sobre/andares/andar1/andar1"
 import Andar2 from "./Sobre/andares/andar2/andar2"
 import Andar3 from "./Sobre/andares/andar3/andar3"
+import Contato from "./contact/contact"
 
 export default function Navegar() {
   return (
@@ -22,6 +23,7 @@ export default function Navegar() {
         <Route path="/andar2" element={<Andar2 /> } />
         <Route path="/andar3" element={<Andar3 /> } />
         <Route path="/patio" element={<Patio /> } />
+        <Route path="/contato" element={<Contato />} />
       </Routes>
     </BrowserRouter>
   );

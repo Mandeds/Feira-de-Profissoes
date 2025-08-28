@@ -133,7 +133,7 @@ export default function Home() {
             <header>
                 <img src="/src/assets/images/vemprofrei.png" alt="Vem pro Frei" />
                 <nav className="navegar">
-                    <Link className="link">Contatos</Link>
+                    <Link className="link" to={'/Contato'}>Contatos</Link>
                     <Link className="link1" to={'/sobre'}>Sobre</Link>
                 </nav>
                 <img src="/src/assets/images/lupa (1).png" alt="" />

@@ -1,0 +1,102 @@
+.container-contact {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(to bottom, #12368E 50%, #F7B73B);
+    min-height: 100vh;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        .Link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, text-decoration 0.3s, color 0.3s;
+            text-shadow: 1px 2px 3px black;
+
+            &:hover {
+                text-decoration: underline;
+                transform: scale(1.08) translateY(-2px);
+            }
+        }
+
+        .pageatual-contact {
+            display: flex;
+            border: 2px solid #FFFFFF;
+            height: 60px;
+            border-radius: 55px;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFC857;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 40%;
+            box-shadow: -1.5px 2.5px 4px black;
+            text-shadow: 1px 2px 3px black;
+        }
+    }
+
+    .page-contact {
+        background-color: #FFF;
+        border: 2px solid #12368E, #F4BF50 70%;
+        box-shadow: -2.9px 5px 2px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        width: 60%;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 25%);
+        height: 20rem;
+
+        h3 {
+            color: #12368E;
+            margin: 0.9rem;
+            text-shadow: 0px 2px 10.5px #0a1d4de8;
+
+            a {
+                color: #12368E;
+            }
+        }
+
+
+
+    }
+}
+
+@media (max-width: 768px) {
+    .container-contact {
+        header {
+            gap: 30px;
+            font-size: 0.5rem;
+
+            .pageatual-contact {
+                font-size: 0.6rem;
+                width: 60%;
+                height: 40px;
+            }
+        }
+        
+        .page-contact {
+            width: 90%;
+            height: auto;
+            padding: 1rem;
+            transform: translate(-50%, 55%);
+
+            .text {
+                width: 100%;
+                font-size: 0.6rem;
+                text-align: center;
+            }
+        }
+    }
+}

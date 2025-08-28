@@ -64,12 +64,12 @@
   .container-andar1 {
         header {
             padding: 1rem;
+            font-size: 0.6rem !important;
 
             .pageatual-andar1 {
-                width: 70%; 
+                width: 70% !important; /* ocupa mais no mobile */
                 margin: 0 auto;
                 font-size: 1rem;
-                padding: 0.8rem;
             }
         }
 

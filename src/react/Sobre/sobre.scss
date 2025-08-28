@@ -9,11 +9,6 @@
     align-items: center;
     background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
     color: #fff;
-    padding: 15px 40px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
-    color: #fff;
     padding: 1rem 2rem;
     border-radius: 0 0 1rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -31,7 +26,8 @@
       }
     }
 
-    .pageatual-sobre {
+    .pageatual-sobre,
+    .pageatual {
       display: flex;
       border: 2px solid #FFFFFF;
       height: 60px;
@@ -39,10 +35,9 @@
       align-items: center;
       justify-content: center;
       background-color: #FFC857;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       width: 40%;
-      font-size: 1.2rem;
       box-shadow: -1.5px 2.5px 4px black;
     }
   }
@@ -67,22 +62,30 @@
       padding-top: 2rem;
     }
 
-    h1.texto1 {
+    h1.texto1,
+    h2.texto1 {
       color: #fff;
       text-shadow: 1px 2px 3px black;
       margin-bottom: 40px;
       text-align: center;
+      font-size: 2rem;
     }
+  }
+
+  .andar1, .andar3{
+    background: linear-gradient(#FFF 30%,#FFC857) !important; 
   }
 
   .andar1,
-  .andar3 {
-    background: linear-gradient(#fff 10%, #FFC857 50%);
+  .andar2,
+  .andar3,
+  .patio {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 5rem 1rem;
+    background: linear-gradient(#FFC857 90%, #FFF 100%);
 
     h1 {
       font-size: 3rem;
@@ -96,7 +99,6 @@
       text-align: center;
     }
 
-    /* Caixa azul com laterais amarelas */
     .bloco {
       position: relative;
       width: 300px;
@@ -132,86 +134,6 @@
       gap: 2rem;
     }
 
-    /* Botões */
-    .botoes {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      margin-left: 5rem;
-
-
-      .informacaocurso {
-        background: #E0E0E0;
-        color: #333;
-        margin-top: 2.5rem;
-
-        .h3 {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-
-  .patio,
-  .andar2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 5rem 1rem;
-    background: linear-gradient(#FFC857 10%, #fff 50%);
-
-    h1 {
-      font-size: 3rem;
-      color: #4A57DC;
-      text-align: center;
-    }
-
-    .teste {
-      color: #4A57DC;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    /* Caixa azul com laterais amarelas */
-    .bloco {
-      position: relative;
-      width: 300px;
-      height: 200px;
-      background: #8FA2F6;
-      border-radius: 20px;
-      margin-top: 2rem;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 20px;
-        width: 40px;
-        height: 160px;
-        background: #FFC857;
-        border-radius: 20px;
-      }
-
-      &::before {
-        left: -25px;
-      }
-
-      &::after {
-        right: -25px;
-      }
-    }
-
-    .cursomae {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    /* Botões */
     .botoes {
       display: flex;
       flex-direction: column;
@@ -219,6 +141,16 @@
       align-items: center;
       margin-left: 5rem;
       margin-top: 3.6rem;
+
+      .curso,
+      .informacaocurso {
+        padding: 15px 40px;
+        border-radius: 15px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        max-width: 300px;
+      }
 
       .informacaocurso {
         background: #E0E0E0;
@@ -233,232 +165,45 @@
   }
 }
 
-/* ----------- MOBILE ----------- */
-.container_sobre {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #0E004D;
-  min-height: 100vh;
+/* ----------- TABLET ----------- */
+@media (max-width: 1024px) {
+  .container_sobre {
+    header {
+      flex-direction: row;
+      gap: 1rem;
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
-    color: #fff;
-    padding: 15px 40px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-    .Link {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s, text-decoration 0.3s, color 0.3s;
-
-      &:hover {
-        text-decoration: underline;
-        transform: scale(1.08) translateY(-2px);
+      .pageatual-sobre,
+      .pageatual {
+        width: 80%;
+        font-size: 1rem;
       }
     }
 
-    .pageatual {
-      display: flex;
-      border: 2px solid #FFFFFF;
-      width: 200px;
-      height: 60px;
-      border-radius: 55px;
-      align-items: center;
-      justify-content: center;
-      background-color: #FFC857;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-  }
-
-  .page {
-    background: linear-gradient(to bottom, #0E004D 0%, #6783FD 50%, #FFC857 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    min-height: 60vh;
-
-    h2.texto1 {
-      color: #fff;
-      text-shadow: 1px 2px 3px black;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-  }
-
-  .andar1,
-  .andar3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 5rem 1rem;
-
-    h1 {
-      font-size: 3rem;
-      color: #4A57DC;
-      text-align: center;
+    .page {
+      padding: 2rem 1rem;
     }
 
-    .teste {
-      color: #4A57DC;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
+    .andar1,
+    .andar2,
+    .andar3,
+    .patio {
+      padding: 3rem 0.5rem;
 
-    /* Caixa azul com laterais amarelas */
-    .bloco {
-      position: relative;
-      width: 300px;
-      height: 200px;
-      background: #8FA2F6;
-      border-radius: 20px;
-      margin-top: 2rem;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 20px;
-        width: 40px;
-        height: 160px;
-        background: #FFC857;
-        border-radius: 20px;
+      h1 {
+        font-size: 2.2rem;
       }
 
-      &::before {
-        left: -25px;
-      }
+      .bloco {
+        width: 220px;
+        height: 150px;
 
-      &::after {
-        right: -25px;
-      }
-    }
-
-    .cursomae {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    /* Botões */
-    .botoes {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      margin-left: 5rem;
-      margin-top: 3.6rem;
-
-      .curso,
-      .informacaocurso {
-        padding: 15px 40px;
-        border-radius: 15px;
-        font-weight: bold;
-        text-align: center;
-        cursor: pointer;
-        max-width: 300px;
-      }
-
-
-
-      .informacaocurso {
-        background: #E0E0E0;
-        color: #333;
-      }
-    }
-  }
-
-
-  .patio,
-  .andar2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 5rem 1rem;
-    background: linear-gradient(#FFC857 10%, #fff 50%);
-
-    h1 {
-      font-size: 3rem;
-      color: #4A57DC;
-      text-align: center;
-    }
-
-    .teste {
-      color: #4A57DC;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    /* Caixa azul com laterais amarelas */
-    .bloco {
-      position: relative;
-      width: 300px;
-      height: 200px;
-      background: #8FA2F6;
-      border-radius: 20px;
-      margin-top: 2rem;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 20px;
-        width: 40px;
-        height: 160px;
-        background: #FFC857;
-        border-radius: 20px;
-        box-sizing: border-box;
-      }
-
-      &::before {
-        left: -25px;
-      }
-
-      &::after {
-        right: -25px;
-      }
-    }
-
-    .cursomae {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    /* Botões */
-    .botoes {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      margin-left: 5rem;
-      margin-top: 3.6rem;
-
-      .curso,
-      .informacaocurso {
-        padding: 15px 40px;
-        border-radius: 15px;
-        font-weight: bold;
-        text-align: center;
-        cursor: pointer;
-        max-width: 300px;
-      }
-
-
-
-      .informacaocurso {
-        background: #E0E0E0;
-        color: #333;
+        &::before,
+        &::after {
+          width: 25px;
+          height: 110px;
+          left: -15px;
+          right: -15px;
+        }
       }
     }
   }
@@ -468,14 +213,26 @@
 @media (max-width: 600px) {
   .container_sobre {
     header {
-      text-align: center;
+      flex-direction: row;
       align-items: center;
-      gap: 10px;
+      gap: 1rem;
       font-size: 0.8rem;
 
-      .pageatual-sobre{
-        width: 80%;
+      .pageatual-sobre,
+      .pageatual {
+        width: 100%;
         font-size: 0.8rem;
+        height: auto;
+        padding: 0.5rem;
+      }
+    }
+
+    .page {
+      padding: 1.5rem 0.5rem;
+
+      h1.texto1,
+      h2.texto1 {
+        font-size: 1.2rem;
       }
     }
 
@@ -483,24 +240,46 @@
     .andar2,
     .andar3,
     .patio {
-
+      padding: 2rem 0.5rem;
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.3rem;
       }
 
       .bloco {
-        width: 60%;
+        width: 90%;
+        min-width: 180px;
+        height: 100px;
+
+        &::before,
+        &::after {
+          width: 15px;
+          height: 70px;
+          left: -7px;
+          right: -7px;
+        }
       }
 
       .cursomae {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
       }
 
       .botoes {
-        width: 50%;
-        margin-right: 5rem
+        margin-left: 0;
+        width: 100%;
+        max-width: 300px;
+        gap: 10px;
+
+        .curso,
+        .informacaocurso {
+          padding: 10px 10px;
+          font-size: 0.95rem;
+          max-width: 100%;
+
+          margin-top: -3rem;
+        }
       }
     }
   }
