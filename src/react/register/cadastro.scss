@@ -18,18 +18,28 @@
     .Link {
       color: #fff;
       text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, text-decoration 0.3s, color 0.3s;
+      text-shadow: 1px 2px 3px black;
+
+      &:hover {
+        text-decoration: underline;
+        transform: scale(1.08) translateY(-2px);
+      }
     }
 
     .pageatual {
       display: flex;
-      border: 2px solid #fff;
-      width: 50%;
-      border-radius: 3rem;
+      border: 2px solid #FFFFFF;
+      height: 60px;
+      border-radius: 55px;
       align-items: center;
       justify-content: center;
       background-color: #FFC857;
-      padding: 1rem;
       font-size: 1.2rem;
+      font-weight: bold;
+      width: 40%;
+      box-shadow: -1.5px 2.5px 4px black;
     }
   }
 
