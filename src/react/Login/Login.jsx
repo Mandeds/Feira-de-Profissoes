@@ -29,12 +29,25 @@ const Login = () => {
       });
   };
 
+  function initAOS() {
+    AOS.init({
+      duration: 1000, // duração da animação em ms
+      once: true,     // se true, anima só na primeira vez
+      offset: 120     // distância em px para disparar
+    });
+  }
+
+  // Executa quando o componente for montado
+  useState(() => {
+    initAOS();
+  }, []);
+
   return (
     <div className='container_login'>
       <header>
         <div className='transaprencia'>
           <div className='ordem'>
-        <h1><Link to={'/'}>Voltar</Link></h1>
+        <h1 id='volta' ><Link to={'/'}>Voltar</Link></h1>
         <div className="pageatual">
           <h1>Login</h1>
         </div>
@@ -45,7 +58,7 @@ const Login = () => {
       </header>
 
       <div className="container_box">
-        <div className='fundoOpaco'>
+        <div data-aos="fade-up" className='fundoOpaco'>
         <form className='Conteudo'>
           <label>Usuario:</label>
           <input
@@ -56,7 +69,7 @@ const Login = () => {
             onChange={(e) => setName(e.target.value)}
           />
           <label>Senha:</label>
-          <input
+          <input data-aos="fade-up"
             type="password"
             id="senha"
             placeholder='Senha'
@@ -70,6 +83,7 @@ const Login = () => {
 
 
       </div>
+        <img id="Predio" src="src/assets/images/prédio.png"/>
     </div>
   );
 };
