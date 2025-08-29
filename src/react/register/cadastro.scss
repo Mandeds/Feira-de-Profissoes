@@ -2,14 +2,14 @@
 .container-cadastro {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: linear-gradient(to bottom, #12368E 50%, #F7B73B);
-    height: 107vh;
+  background-image: linear-gradient(to bottom, #12368E 50%, #F7B73B);
+  height: 107vh;
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
+    background: #12368E; //#221d73 #231bb6
     color: #fff;
     padding: 1rem 2rem;
     border-radius: 0 0 1rem 1rem;
@@ -20,7 +20,8 @@
       text-decoration: none;
       font-weight: bold;
       transition: transform 0.3s, text-decoration 0.3s, color 0.3s;
-      text-shadow: 1px 2px 3px black;
+      text-shadow: 1px 2px 3px rgba(36, 36, 36, 0.692);
+      padding-left: 1rem;
 
       &:hover {
         text-decoration: underline;
@@ -35,11 +36,12 @@
       border-radius: 55px;
       align-items: center;
       justify-content: center;
-      background-color: #FFC857;
+      background-color: #231bb6;
       font-size: 1.2rem;
       font-weight: bold;
       width: 40%;
       box-shadow: -1.5px 2.5px 4px black;
+      box-shadow: -1.5px 2.5px 4px rgba(110, 110, 110, 0.753);
     }
   }
 
@@ -62,7 +64,7 @@
       justify-content: center;
       margin-top: 1.5rem;
 
-      
+
 
       .School {
         margin-left: 4%;
@@ -72,11 +74,11 @@
         margin-left: 3%;
       }
 
-      .emailInput{
+      .emailInput {
         width: 86.5%;
       }
 
-      .CPF{
+      .CPF {
         margin-left: 5%;
       }
 
@@ -187,9 +189,9 @@
         flex-direction: column;
         align-items: flex-start;
 
-        .CPF{
+        .CPF {
           margin-left: -0% !important;
-      }
+        }
 
         input,
         select {
@@ -240,9 +242,9 @@
         flex-direction: column;
         align-items: flex-start;
 
-        .CPF{
+        .CPF {
           margin-left: -0% !important;
-      }
+        }
 
         input,
         select {
