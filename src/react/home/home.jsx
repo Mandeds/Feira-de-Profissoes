@@ -156,53 +156,15 @@ export default function Home() {
                     </div>
 
                     <h1 className="horario">
+                    <h3>ESTAMOS NA CONTAGEM REGRESSIVA</h3>
                         {timeLeft.days} Dias {timeLeft.hours} Horas {timeLeft.minutes} Minutos
                     </h1>
+                    
+                    <h3 className="paranossafeira">PARA NOSSA FEIRA!</h3>
 
-                    <div style={{ width: '100%', maxWidth: 900, margin: '0 auto' }}>
-                        <Swiper
-                            modules={[Navigation, Pagination, A11y, Autoplay, EffectFade]}
-                            navigation
-                            pagination={{ clickable: true }}
-                            autoplay={{ delay: 3000, disableOnInteraction: false }}
-                            effect="fade"
-                            loop
-                            speed={600}
-                            spaceBetween={16}
-                            slidesPerView={1}
-                            style={{ borderRadius: 16, overflow: 'hidden' }}
-                        >
-                            {imagens.map((img) => (
-                                <SwiperSlide
-                                    key={img.id}
-                                    style={{
-                                        width: "100%",        // ocupa toda a largura do container
-                                        height: 100,          // altura fixa para todas as imagens
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        backgroundColor: "#000" // fundo para quando a imagem não cobre 100%
-                                    }}
-                                >
-                                    <img
-                                        src={img.src}
-                                        alt={img.alt}
-                                        style={{
-                                            width: "100%",
-                                            height: "100%",
-                                            objectFit: "cover", // preenche todo o slide mantendo proporção
-                                            display: "block"
-                                        }}
-                                        loading="lazy"
-                                    />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
 
                     <div className="informacoes">
-                        <h2>ESTAMOS NA CONTAGEM REGRESSIVA</h2>
-                        <h2>PARA NOSSA FEIRA!</h2>
+                        
                         {/* AO SELECIONAR OS ANDARES A IMAGEM AO LADO TRCA DE ACORDO COM A OPÇÂO*/}
                         <Link className="andares" onClick={voltarTitulo} >ANDARES</Link>
                         <div className="escolhas">
@@ -239,7 +201,6 @@ export default function Home() {
                     <div className="cards_andares">
                         <h2>Esforço que transforma <br />
                             e orgulho permanece</h2>
-                        <img src={src} />
                         <div className="andares_fotos">
 
                         </div>

@@ -1,16 +1,27 @@
+/* Reset básico de todos os elementos */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0; /* remove espaçamento interno */
+    margin: 0;  /* remove espaçamento externo */
+    box-sizing: border-box; /* inclui padding e border na largura total */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* fonte padrão do sistema */
 }
 
+/* Configuração do body e html */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* evita barra horizontal */
+}
 
+/* Container principal da home */
 .container_home {
-    background-image: linear-gradient(to bottom, #12368E 50%, #F7B73B);
-    height: 1000px;
+    background-image: linear-gradient(to bottom, #12368E 50%, #F7B73B); /* gradiente vertical */
+    min-height: 100vh; /* altura mínima = tela toda */
+    width: 100%;
+    overflow-x: hidden;
 }
 
+/* Header da página */
 header {
     width: 100%;
     padding: 15px 40px;
@@ -18,234 +29,308 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); /* sombra abaixo do header */
 }
 
+/* Logo principal */
 header img:nth-child(1) {
     height: 80px;
 }
 
+/* Logo ou ícone secundário */
 header img:nth-child(3) {
     height: 45px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; /* efeito suave */
 }
 
+/* Hover do ícone do header */
 header img:nth-child(3):hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* aumenta o tamanho ao passar o mouse */
 }
 
+/* Botões / links principais */
+.link, .link1 {
+    text-decoration: none; /* remove underline */
+    background-color: #F4BF50;
+    color: #10338D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 12px 25px;
+    transition: all 0.3s ease-in-out;
+}
 
-
-
+/* Bordas arredondadas específicas */
 .link {
-    text-decoration: none;
-    background-color: #F4BF50;
-    color: #10338D;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    padding: 12px 25px;
-    border-radius: 36px 0px 0px 36px;
-    transition: all 0.3s ease-in-out;
+    border-radius: 36px 0px 0px 36px; /* arredonda só um lado */
 }
-
 .link1 {
-    text-decoration: none;
-    background-color: #F4BF50;
-    color: #10338D;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    padding: 12px 25px;
     border-radius: 0px 36px 36px 0px;
-    transition: all 0.3s ease-in-out;
 }
 
+/* Hover para suavizar bordas */
 .link:hover,
 .link1:hover {
     border-radius: 45px;
 }
 
-/* SECTION PRINCIPAL */
-
-
+/* SEÇÃO PRINCIPAL */
+.container_main {
+    display: flex;
+    flex-wrap: wrap; /* quebra linhas em telas menores */
+    justify-content: center;
+    gap: 2rem; /* espaçamento entre elementos */
+    margin-top: 3rem;
+    width: 100%;
+}
 
 .container_principal {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 600px; /* limite de largura */
+    width: 100%;
 }
 
+/* Caixa principal da feira */
 .container_principal>.feira {
     height: 230px;
-    margin-top: 60px;
-    margin-bottom: 45px;
-    margin-left: 35px;
-    padding-right: 50px;
-    background-color: rgba(255, 255, 255, 0.3);
-    /* fundo semi-transparente */
+    margin: 60px auto 45px auto;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* transparente com blur */
     border-radius: 40px;
     backdrop-filter: blur(10px);
-    /* efeito acrílico */
     -webkit-backdrop-filter: blur(10px);
-    /* para compatibilidade com Safari */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* opcional: borda suave */
-
 }
 
-.container_principal button {
+/* Container dos botões */
+.botoes {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 1.2rem; /* espaço entre os botões */
+    margin-top: 1rem;
+}
+
+/* Botões */
+.botoes button {
     border-radius: 40px;
     height: 3rem;
     width: 7rem;
     color: #0b3baa;
-    margin: 0 1.2rem;
-    border: none;
-    border: #EFB657;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fff; /* fundo branco */
+    border: 2px solid #0b3baa; /* contorno azul */
     font-weight: 600;
-    transition: all calc(0.5s) ease;
-}
-
-.container_principal button:hover {
-    transform: scale(1.3);
-}
-
-.container_main {
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
-    gap: 2rem;
-    margin-top: 3rem;
-
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
+/* Links dentro do botão */
+.botoes button a {
+    text-decoration: none; /* remove underline */
+    color: inherit; /* herda a cor do botão */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+
+/* Hover dos botões */
+.container_principal button:hover {
+    transform: scale(1.1);
+}
+
+/* Horário em destaque */
 .horario {
     font-weight: 900;
-    font-size: 50pt;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
     margin-top: 1.5rem;
     color: #ffa200;
+    text-align: center;
 }
 
+.horario h3 {
+ color: white;
+}
+
+.paranossafeira {
+    color: white;
+    font-size: 50px;
+}
+
+/* Informações da seção */
+.informacoes {
+    text-align: center;
+}
 .informacoes>h2 {
     color: white;
     font-family: "Roboto";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.informacoes>h2:nth-child(2) {
-    margin-bottom: 4rem;
 }
 
 .informacoes>.andares {
-    padding: 1rem 8.9rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
     background-color: #133A94;
     color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
     border-radius: 40px;
-    transition: all calc(0.5s) ease;
+    transition: all 0.5s ease;
 }
 
-// container_secundaria
-
+/* Container secundário */
 .container_secundaria {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 48.8%;
-
+    max-width: 500px; /* não estoura em telas menores */
+    width: 100%;
+    padding-left: 45px;
 }
 
-.container_secundaria>.card_instituto {
+/* Cartão do instituto */
+.card_instituto {
     background-color: #275BD5;
     padding: .6rem .9rem;
     border-radius: 15px;
     color: white;
     font-weight: bolder;
     font-size: 20pt;
-    margin-top: 2rem;
-    z-index: 1000;
+    margin-top: 1rem;
+    text-align: center;
 }
 
-.container_secundaria>.card_instituto>.card_interno {
-    padding: 0.9rem 5.8rem;
-    border-radius: 15px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
-}
-
-.container_secundaria>.cards_andares {
+/* Cartões de andares */
+.cards_andares {
     background-color: #FFE8BD;
     width: 100%;
-    height: 47rem;
-    padding: 3rem;
-    margin-top: -50px;
-    border-radius: 40px 0px 0px 40px;
+    padding: 2rem 1rem;
+    margin-top: 0.7rem;
+    border-radius: 40px;
+    text-align: center;
 }
 
-.container_secundaria>.cards_andares h2 {
-    font-family: "arial", sans-serif;
+.cards_andares h2 {
     font-weight: lighter;
     color: #10338D;
-    text-align: center;
-    padding-top: 2rem;
+    margin-bottom: 1.5rem;
 }
 
+/* Redes sociais */
 .redesSociais {
-    position: absolute;
-    margin-left: 22rem;
-}
-
-.redesSociais img {
     display: flex;
-    height: 20px;
-    margin-left: 200%;
-    margin-bottom: 1rem;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.imagens {
-    display: flex;
-}
-
-.container_secundaria h3 {
+.redesSociais a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* ícones circulares */
+    transition: transform 0.3s, box-shadow 0.3s; /* animação hover */
+}
+
+.redesSociais a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* deixa ícone branco */
+}
+
+.redesSociais a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* sombra ao passar mouse */
+}
+
+/* Cores específicas para cada rede social */
+.redesSociais a:nth-child(1) { background-color: #1877f2; } /* Facebook */
+.redesSociais a:nth-child(2) { background-color: #e1306c; } /* Instagram */
+.redesSociais a:nth-child(3) { background-color: #000000; } /* TikTok */
+.redesSociais a:nth-child(4) { background-color: #0077b5; } /* LinkedIn */
+.redesSociais a:nth-child(5) { background-color: #ff0000; } /* YouTube */
+
+/* Títulos secundários */
+.container_secundaria h3 {
+    font-size: 2rem;
     color: #275BD5;
+    margin: 1rem 0;
+}
+
+/* Links adicionais */
+.Link2, .Link3 {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 48px;
 }
 
 .Link2 {
-    text-decoration: none;
     background-color: #275BD5;
     color: white;
-    font-size: 1.7rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    padding: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 48px;
 }
-
 .Link3 {
-    text-decoration: none;
     background-color: white;
     color: #10338D;
-    font-size: 1.7rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    padding: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 48px;
 }
 
+/* Container de links */
 .links {
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Container das escolhas */
+.escolhas {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    margin-top: 2rem;
+}
+
+.escolhas nav ul {
+    list-style: none; /* remove bullets */
+    display: flex;
+    gap: 1.5rem; /* espaço entre os itens */
+    padding: 0;
+    margin: 0;
+}
+
+.escolhas nav ul li {
+    padding: 0.6rem 1.2rem; /* espaço interno */
+    border-radius: 40px; /* mesma estética arredondada dos botões */
+    border: 2px solid #0b3baa; /* contorno azul igual aos botões */
+    font-weight: 900;
+    color: #0b3baa;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efeito hover igual ao dos botões */
+.escolhas nav ul li:hover {
+    background-color: #0f48cc;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Estado ativo opcional */
+.escolhas nav ul li.active {
+    background-color: #f1f1f1;
+    color: #fff;
 }
