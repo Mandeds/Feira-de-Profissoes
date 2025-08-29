@@ -1,23 +1,31 @@
 .container_login {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    max-height: 100vh;
+    background: linear-gradient(180deg, rgba(14, 0, 77, 1) 10%, rgba(62, 118, 250, 1) 81%);
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
 
+
     header {
         width: 100%;
-        max-width: 500px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: linear-gradient(180deg, #f4bf50 0%, #ffc857 100%);
-        padding: 15px 20px;
-        border-radius: 0px 0px 10px 10px;
-        color: white;
-        margin-bottom: 40px;
-
+        background-color: rgba(80, 76, 129, 0.39);
+        
+        .transaprencia{
+            border-radius: 0px 0px 10px 10px;
+            height: 10vh;
+            width: 100%;
+        }
+        
+        .ordem{
+            color: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            //padding: 1%;
+            justify-content: space-between;
+        }
 
         a {
             color: white;
@@ -44,28 +52,48 @@
     }
 
     // Formulário
-    .container_login {
+    .container_box {
+        margin-top: 150px;
         width: 100%;
-        max-width: 400px;
-        background-color: white;
-        border-radius: 10px;
+        max-width: 70vh;
+        max-height: 100vh;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        padding: 30px;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        justify-content: center ;
+        gap: 100px;
 
-        form {
+        .fundoOpaco {
+            border-radius: 30px;
+            padding: 100px;
+            border-color: #f0f0f0;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            //position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* preto com 50% de opacidade */
+            border-radius: 8px;
+            /* exemplo de forma */
+            z-index: 1;
+        }
+
+        .Conteudo{
             display: flex;
             flex-direction: column;
-
+            
             label {
                 margin-bottom: 5px;
                 color: #333;
-                font-size: 14px;
+                font-size: 19px;
             }
-
+            
             input {
+                margin: 1%;
                 padding: 10px;
                 font-size: 16px;
                 border-radius: 5px;
@@ -73,27 +101,84 @@
                 margin-bottom: 15px;
                 background-color: #f0f0f0;
                 transition: border-color 0.3s;
-
+                
                 &:focus {
+                    margin: 10%;
                     border-color: #ffc857;
                     outline: none;
                 }
             }
         }
 
-        button.logar {
-            background-color: #ffc857;
-            color: white;
-            padding: 12px;
-            font-size: 16px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        #Usuario,#password{
+            font-size: 30px;
+            color: #c99e40;
+        }
 
-            &:hover {
-                background-color: #c99e40;
+        button.logar {
+            margin-top: 10vh;
+            //margin: 10%;
+            background-color: #ffc857;
+            //color: white;
+            padding: 15px 40px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative; /* mudou de absolute pra relative para se encaixar no layout */
+            transition: all 0.2s ease;
+            box-shadow: none;
+            overflow: hidden;
+        }
+        
+        button.logar:hover {
+            background-color: #c99e40;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        button.logar:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        button.logar::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            background-color: #ffc857;
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+        
+        button.logar:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+        
+        /* Animação */
+        .logar-animated {
+            animation: moveInBottom 5s ease-out;
+            animation-fill-mode: backwards;
+        }
+        
+        @keyframes moveInBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
+
+        
+
+        }
     }
-}

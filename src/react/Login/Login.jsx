@@ -32,15 +32,21 @@ const Login = () => {
   return (
     <div className='container_login'>
       <header>
+        <div className='transaprencia'>
+          <div className='ordem'>
         <h1><Link to={'/'}>Voltar</Link></h1>
         <div className="pageatual">
           <h1>Login</h1>
         </div>
         <img src="src/assets/images/user2.png" alt="User" />
+        </div>
+        </div>
+
       </header>
 
-      <div className="container_login">
-        <form>
+      <div className="container_box">
+        <div className='fundoOpaco'>
+        <form className='Conteudo'>
           <label>Usuario:</label>
           <input
             type="text"
@@ -53,13 +59,15 @@ const Login = () => {
           <input
             type="password"
             id="senha"
-            placeholder='Senhaforte'
+            placeholder='Senha'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </form>
-        <button className='logar' type='button' onClick={verificarAdmin}>Entrar</button>
+        <button className='logar logar-animated' type='button' onClick={verificarAdmin}>Entrar</button>
         {/*  AQUI È LOGIN DE ADMS NÃO DE USUARIOS NORMAIS */}
+        </div>
+
 
       </div>
     </div>
