@@ -1,24 +1,38 @@
 /* Reset básico de todos os elementos */
 * {
-    padding: 0; /* remove espaçamento interno */
-    margin: 0;  /* remove espaçamento externo */
-    box-sizing: border-box; /* inclui padding e border na largura total */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* fonte padrão do sistema */
+    padding: 0;
+    /* remove espaçamento interno */
+    margin: 0;
+    /* remove espaçamento externo */
+    box-sizing: border-box;
+    /* inclui padding e border na largura total */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* fonte padrão do sistema */
 }
 
 /* Configuração do body e html */
-body, html {
+body,
+html {
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* evita barra horizontal */
+    overflow-x: hidden;
+    /* evita barra horizontal */
 }
 
 /* Container principal da home */
 .container_home {
-    background-image: linear-gradient(to bottom, #12368E 50%, #F7B73B); /* gradiente vertical */
     min-height: 100vh; /* altura mínima = tela toda */
     width: 100%;
     overflow-x: hidden;
+
+    background: 
+        linear-gradient(
+            rgba(18, 54, 142, 0.7) 50%,   /* azul com opacidade */
+            rgba(247, 183, 59, 0.7)       /* amarelo com opacidade */
+        ),
+        url(/src/assets/images/background.png);
+    background-size: cover;
+    background-position: center;
 }
 
 /* Header da página */
@@ -29,7 +43,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); /* sombra abaixo do header */
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    /* sombra abaixo do header */
 }
 
 /* Logo principal */
@@ -40,17 +55,21 @@ header img:nth-child(1) {
 /* Logo ou ícone secundário */
 header img:nth-child(3) {
     height: 45px;
-    transition: all 0.5s ease-in-out; /* efeito suave */
+    transition: all 0.5s ease-in-out;
+    /* efeito suave */
 }
 
 /* Hover do ícone do header */
 header img:nth-child(3):hover {
-    transform: scale(1.2); /* aumenta o tamanho ao passar o mouse */
+    transform: scale(1.2);
+    /* aumenta o tamanho ao passar o mouse */
 }
 
 /* Botões / links principais */
-.link, .link1 {
-    text-decoration: none; /* remove underline */
+.link,
+.link1 {
+    text-decoration: none;
+    /* remove underline */
     background-color: #F4BF50;
     color: #10338D;
     font-family: Arial, Helvetica, sans-serif;
@@ -61,8 +80,10 @@ header img:nth-child(3):hover {
 
 /* Bordas arredondadas específicas */
 .link {
-    border-radius: 36px 0px 0px 36px; /* arredonda só um lado */
+    border-radius: 36px 0px 0px 36px;
+    /* arredonda só um lado */
 }
+
 .link1 {
     border-radius: 0px 36px 36px 0px;
 }
@@ -76,9 +97,11 @@ header img:nth-child(3):hover {
 /* SEÇÃO PRINCIPAL */
 .container_main {
     display: flex;
-    flex-wrap: wrap; /* quebra linhas em telas menores */
+    flex-wrap: wrap;
+    /* quebra linhas em telas menores */
     justify-content: center;
-    gap: 2rem; /* espaçamento entre elementos */
+    gap: 6rem;
+    /* espaçamento entre elementos */
     margin-top: 3rem;
     width: 100%;
 }
@@ -87,7 +110,8 @@ header img:nth-child(3):hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px; /* limite de largura */
+    max-width: 600px;
+    /* limite de largura */
     width: 100%;
 }
 
@@ -96,7 +120,8 @@ header img:nth-child(3):hover {
     height: 230px;
     margin: 60px auto 45px auto;
     padding: 0 20px;
-    background-color: rgba(255, 255, 255, 0.3); /* transparente com blur */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* transparente com blur */
     border-radius: 40px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -106,8 +131,10 @@ header img:nth-child(3):hover {
 /* Container dos botões */
 .botoes {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    gap: 1.2rem; /* espaço entre os botões */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    gap: 1.2rem;
+    /* espaço entre os botões */
     margin-top: 1rem;
 }
 
@@ -117,8 +144,10 @@ header img:nth-child(3):hover {
     height: 3rem;
     width: 7rem;
     color: #0b3baa;
-    background-color: #fff; /* fundo branco */
-    border: 2px solid #0b3baa; /* contorno azul */
+    background-color: #fff;
+    /* fundo branco */
+    border: 2px solid #0b3baa;
+    /* contorno azul */
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -130,8 +159,10 @@ header img:nth-child(3):hover {
 
 /* Links dentro do botão */
 .botoes button a {
-    text-decoration: none; /* remove underline */
-    color: inherit; /* herda a cor do botão */
+    text-decoration: none;
+    /* remove underline */
+    color: inherit;
+    /* herda a cor do botão */
     width: 100%;
     height: 100%;
     display: flex;
@@ -149,25 +180,38 @@ header img:nth-child(3):hover {
 /* Horário em destaque */
 .horario {
     font-weight: 900;
-    font-size: 2.5rem;
-    margin-top: 1.5rem;
-    color: #ffa200;
+    font-size: 1.5rem;
+    margin-top: 4rem;
     text-align: center;
+  
+    background: linear-gradient(360deg, #ff8800, #F4833E, #ffee00);
+    -webkit-background-clip: text; /* necessário no Chrome/Safari */
+    -webkit-text-fill-color: transparent; /* deixa a cor do texto transparente */
+    background-clip: text; /* necessário no Firefox */
+    color: transparent; /* fallback */
+  }
+  
+
+.regressiva {
+    font-size: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .horario h3 {
- color: white;
+    color: white;
 }
 
 .paranossafeira {
     color: white;
-    font-size: 50px;
+    font-size: 2rem;
 }
 
 /* Informações da seção */
 .informacoes {
     text-align: center;
 }
+
 .informacoes>h2 {
     color: white;
     font-family: "Roboto";
@@ -191,7 +235,8 @@ header img:nth-child(3):hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 500px; /* não estoura em telas menores */
+    max-width: 500px;
+    /* não estoura em telas menores */
     width: 100%;
     padding-left: 45px;
 }
@@ -239,27 +284,51 @@ header img:nth-child(3):hover {
     align-items: center;
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* ícones circulares */
-    transition: transform 0.3s, box-shadow 0.3s; /* animação hover */
+    border-radius: 50%;
+    /* ícones circulares */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* animação hover */
 }
 
 .redesSociais a img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1); /* deixa ícone branco */
+    filter: brightness(0) invert(1);
+    /* deixa ícone branco */
 }
 
 .redesSociais a:hover {
     transform: scale(1.2);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* sombra ao passar mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* sombra ao passar mouse */
 }
 
 /* Cores específicas para cada rede social */
-.redesSociais a:nth-child(1) { background-color: #1877f2; } /* Facebook */
-.redesSociais a:nth-child(2) { background-color: #e1306c; } /* Instagram */
-.redesSociais a:nth-child(3) { background-color: #000000; } /* TikTok */
-.redesSociais a:nth-child(4) { background-color: #0077b5; } /* LinkedIn */
-.redesSociais a:nth-child(5) { background-color: #ff0000; } /* YouTube */
+.redesSociais a:nth-child(1) {
+    background-color: #1877f2;
+}
+
+/* Facebook */
+.redesSociais a:nth-child(2) {
+    background-color: #e1306c;
+}
+
+/* Instagram */
+.redesSociais a:nth-child(3) {
+    background-color: #000000;
+}
+
+/* TikTok */
+.redesSociais a:nth-child(4) {
+    background-color: #0077b5;
+}
+
+/* LinkedIn */
+.redesSociais a:nth-child(5) {
+    background-color: #ff0000;
+}
+
+/* YouTube */
 
 /* Títulos secundários */
 .container_secundaria h3 {
@@ -269,7 +338,8 @@ header img:nth-child(3):hover {
 }
 
 /* Links adicionais */
-.Link2, .Link3 {
+.Link2,
+.Link3 {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
@@ -281,6 +351,7 @@ header img:nth-child(3):hover {
     background-color: #275BD5;
     color: white;
 }
+
 .Link3 {
     background-color: white;
     color: #10338D;
@@ -298,24 +369,30 @@ header img:nth-child(3):hover {
 /* Container das escolhas */
 .escolhas {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
+    justify-content: center;
+    /* centraliza horizontalmente */
     margin-top: 2rem;
 }
 
 .escolhas nav ul {
-    list-style: none; /* remove bullets */
+    list-style: none;
+    /* remove bullets */
     display: flex;
-    gap: 1.5rem; /* espaço entre os itens */
+    gap: 1.5rem;
+    /* espaço entre os itens */
     padding: 0;
     margin: 0;
 }
 
 .escolhas nav ul li {
-    padding: 0.6rem 1.2rem; /* espaço interno */
-    border-radius: 40px; /* mesma estética arredondada dos botões */
-    border: 2px solid #0b3baa; /* contorno azul igual aos botões */
+    padding: 0.6rem 1.2rem;
+    /* espaço interno */
+    border-radius: 40px;
+    /* mesma estética arredondada dos botões */
+    border: 2px solid #0b3baa;
+    /* contorno azul igual aos botões */
     font-weight: 900;
-    color: #0b3baa;
+    color: rgb(0, 17, 73);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -333,4 +410,42 @@ header img:nth-child(3):hover {
 .escolhas nav ul li.active {
     background-color: #f1f1f1;
     color: #fff;
+}
+
+/* Posters */
+
+.andares_fotos img {
+    height: 570px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* imagem escondida inicialmente */
+.andares_hidden {
+    position: fixed;
+    /* fica fixa na tela */
+    top: 50%;
+    /* centraliza vertical */
+    left: 50%;
+    /* centraliza horizontal */
+    transform: translate(-50%, -50%) scale(0);
+    /* começa "fechada" */
+    height: 570px;
+    border-radius: 20px;
+    opacity: 0;
+    /* invisível */
+    transition: all 0.1s ease;
+    /* animação suave */
+    z-index: 999;
+    /* fica acima do conteúdo */
+}
+
+/* quando passar o mouse em .andares_fotos */
+.andares_fotos:active .andares_hidden {
+    transform: translate(-50%, -50%) scale(1);
+    /* cresce */
+    opacity: 1;
+    /* aparece */
+
+
 }

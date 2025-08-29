@@ -2,6 +2,12 @@ import "./style.scss";
 import "../global.scss";
 import { Link } from "react-router";
 import React, { useEffect, useState } from 'react';
+import Patio from '../../assets/images/andares/posterPatio.png'
+import priAndar from '../../assets/images/andares/1.png'
+import segAndar from '../../assets/images/andares/2.png'
+import tercAndar from '../../assets/images/andares/3.png'
+import apresen from '../../assets/images/andares/apresentacao.png'
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay, EffectFade } from 'swiper/modules';
@@ -52,19 +58,20 @@ export default function Home() {
     const [doisAndar, setdoisndar] = useState("2° Andar");
     const [tresAndar, settresndar] = useState("3° Andar");
 
-    let [src, setSrc] = useState("/src/assets/images/freibg.png")
+    let [endereco, setEndereco] = useState(apresen)
 
 
     function voltarTitulo() {
         setTitulo("ANDARES")
-        setSrc("/src/assets/images/freibg.png")
+        
+        setEndereco(apresen)
     }
 
     function mudarTituloPatio() {
-        let valor = patio
+        let valor = "Poster:"
         setTitulo(valor)
 
-        setSrc("")
+        setEndereco(Patio)
 
 
     }
@@ -72,15 +79,21 @@ export default function Home() {
         let valor = umAndar
         setTitulo(valor)
 
+        setEndereco(priAndar)
+
     }
     function mudarTituloDois() {
         let valor = doisAndar
         setTitulo(valor)
 
+        setEndereco(segAndar)
+
     }
     function mudarTituloTres() {
         let valor = tresAndar
         setTitulo(valor)
+
+        setEndereco(tercAndar)
 
     }
 
@@ -157,11 +170,12 @@ export default function Home() {
 
                     <h1 className="horario">
                     <h3>ESTAMOS NA CONTAGEM REGRESSIVA</h3>
-                        {timeLeft.days} Dias {timeLeft.hours} Horas {timeLeft.minutes} Minutos
-                    </h1>
-                    
                     <h3 className="paranossafeira">PARA NOSSA FEIRA!</h3>
 
+                    <div className="regressiva">
+                        {timeLeft.days} Dias e {timeLeft. hours} Horas <br /> Para começar!
+                        </div>
+                    </h1>  
 
                     <div className="informacoes">
                         
@@ -176,6 +190,7 @@ export default function Home() {
                                     <li onClick={mudarTituloTres}>{tresAndar}</li>
                                 </ul>
                             </nav>
+
                         </div>
                     </div>
                 </section>
@@ -202,9 +217,11 @@ export default function Home() {
                         <h2>Esforço que transforma <br />
                             e orgulho permanece</h2>
                         <div className="andares_fotos">
-
-                        </div>
                         <h3>{titulo}</h3>
+                        <img src={endereco}  />
+                        <img src={endereco} className="andares_hidden" />
+                        </div>
+
 
 
 
