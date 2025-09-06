@@ -12,7 +12,7 @@
     overflow-x: hidden;
 
     header {
-        background: linear-gradient(180deg, #F4BF50 0%, #FFC857 100%);
+        background: #0b3baa; 
         color: #fff;
         padding: 1rem 2rem;
         border-radius: 0 0 1rem 1rem;
@@ -30,7 +30,7 @@
             border-radius: 3rem;
             align-items: center;
             justify-content: center;
-            background-color: #FFC857;
+            background-color: #0943cc;
             padding: 1rem;
             font-size: 1.2rem;
             margin-right: 30%;
@@ -71,7 +71,7 @@
             
 
             .pageatual-patio {
-                width: 70% !important; /* ocupa mais no mobile */
+                width: 56% !important; /* ocupa mais no mobile */
                 margin: 0 auto;
                 font-size: 1rem;
                 
@@ -81,7 +81,7 @@
         .informacoes-patio {
             flex-direction: column; /* empilha no mobile */
             gap: 1rem;
-            margin-top: 2rem;
+            padding-top: 6rem;
 
             h1 {
                 font-size: 1.8rem;

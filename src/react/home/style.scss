@@ -1,41 +1,38 @@
-/* Reset básico de todos os elementos */
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
 * {
     padding: 0;
-    /* remove espaçamento interno */
     margin: 0;
-    /* remove espaçamento externo */
     box-sizing: border-box;
-    /* inclui padding e border na largura total */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* fonte padrão do sistema */
 }
 
-/* Configuração do body e html */
-body,
-html {
+body, html {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    /* evita barra horizontal */
 }
 
-/* Container principal da home */
+/* ===== CONTAINER PRINCIPAL ===== */
 .container_home {
-    min-height: 100vh; /* altura mínima = tela toda */
+    min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
-
     background: 
         linear-gradient(
-            rgba(18, 54, 142, 0.7) 50%,   /* azul com opacidade */
-            rgba(247, 183, 59, 0.7)       /* amarelo com opacidade */
+            rgba(18, 54, 142, 0.7),
+            rgba(247, 183, 59, 0.7)
         ),
         url(/src/assets/images/background.png);
     background-size: cover;
     background-position: center;
+    transition: opacity 0.3s ease;
 }
 
-/* Header da página */
+.container_home.dim {
+    opacity: 0.7;
+}
+
+/* ===== HEADER ===== */
 header {
     width: 100%;
     padding: 15px 40px;
@@ -44,66 +41,59 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
-    /* sombra abaixo do header */
+    position: relative;
+    z-index: 10;
+    background-color: #0b3baa;
 }
 
-/* Logo principal */
-header img:nth-child(1) {
+header img:first-child {
     height: 80px;
 }
 
-/* Logo ou ícone secundário */
-header img:nth-child(3) {
+header img:last-child {
     height: 45px;
     transition: all 0.5s ease-in-out;
-    /* efeito suave */
 }
 
-/* Hover do ícone do header */
-header img:nth-child(3):hover {
+header img:last-child:hover {
     transform: scale(1.2);
-    /* aumenta o tamanho ao passar o mouse */
 }
 
-/* Botões / links principais */
-.link,
-.link1 {
+/* ===== BOTÕES DE NAVEGAÇÃO ===== */
+.navegar {
+    display: flex;
+}
+
+.link, .link1 {
     text-decoration: none;
-    /* remove underline */
     background-color: #F4BF50;
     color: #10338D;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     padding: 12px 25px;
     transition: all 0.3s ease-in-out;
 }
 
-/* Bordas arredondadas específicas */
 .link {
     border-radius: 36px 0px 0px 36px;
-    /* arredonda só um lado */
 }
 
 .link1 {
     border-radius: 0px 36px 36px 0px;
 }
 
-/* Hover para suavizar bordas */
-.link:hover,
-.link1:hover {
+.link:hover, .link1:hover {
     border-radius: 45px;
 }
 
-/* SEÇÃO PRINCIPAL */
+/* ===== CONTEÚDO PRINCIPAL ===== */
 .container_main {
     display: flex;
     flex-wrap: wrap;
-    /* quebra linhas em telas menores */
     justify-content: center;
     gap: 6rem;
-    /* espaçamento entre elementos */
     margin-top: 3rem;
     width: 100%;
+    padding: 0 20px;
 }
 
 .container_principal {
@@ -111,58 +101,51 @@ header img:nth-child(3):hover {
     flex-direction: column;
     align-items: center;
     max-width: 600px;
-    /* limite de largura */
     width: 100%;
 }
 
-/* Caixa principal da feira */
-.container_principal>.feira {
-    height: 230px;
-    margin: 60px auto 45px auto;
-    padding: 0 20px;
+/* Caixa da feira */
+.container_principal > .feira {
+    max-width: 90%;     
+    height: auto;       
+    margin: 20px auto;  
+    display: block;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.3);
-    /* transparente com blur */
     border-radius: 40px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Container dos botões */
+
+/* Botões */
 .botoes {
     display: flex;
     justify-content: center;
-    /* centraliza horizontalmente */
     gap: 1.2rem;
-    /* espaço entre os botões */
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
-/* Botões */
 .botoes button {
     border-radius: 40px;
     height: 3rem;
-    width: 7rem;
+    min-width: 7rem;
     color: #0b3baa;
     background-color: #fff;
-    /* fundo branco */
     border: 2px solid #0b3baa;
-    /* contorno azul */
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
 }
 
-/* Links dentro do botão */
 .botoes button a {
     text-decoration: none;
-    /* remove underline */
     color: inherit;
-    /* herda a cor do botão */
     width: 100%;
     height: 100%;
     display: flex;
@@ -171,53 +154,55 @@ header img:nth-child(3):hover {
     font-weight: 800;
 }
 
-
-/* Hover dos botões */
-.container_principal button:hover {
+.botoes button:hover {
     transform: scale(1.1);
 }
 
-/* Horário em destaque */
-.horario {
-    font-weight: 900;
-    font-size: 1.5rem;
-    margin-top: 4rem;
+/* Contador */
+.contador {
     text-align: center;
-  
-    background: linear-gradient(360deg, #ff8800, #F4833E, #ffee00);
-    -webkit-background-clip: text; /* necessário no Chrome/Safari */
-    -webkit-text-fill-color: transparent; /* deixa a cor do texto transparente */
-    background-clip: text; /* necessário no Firefox */
-    color: transparent; /* fallback */
-  }
-  
-
-.regressiva {
-    font-size: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    margin-top: 4rem;
 }
 
-.horario h3 {
+.contador h3 {
     color: white;
+    margin-bottom: 1rem;
 }
 
 .paranossafeira {
     color: white;
     font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-/* Informações da seção */
+.horario {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    background: linear-gradient(360deg, #ff8800, #F4833E, #ffee00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.regressiva {
+    font-size: 3rem;
+    padding: 2rem 0;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Informações */
 .informacoes {
     text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
 }
 
-.informacoes>h2 {
-    color: white;
-    font-family: "Roboto";
-}
-
-.informacoes>.andares {
+.informacoes > .andares {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 1rem 2rem;
@@ -228,20 +213,24 @@ header img:nth-child(3):hover {
     text-decoration: none;
     border-radius: 40px;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
-/* Container secundário */
+.informacoes > .andares:hover {
+    transform: scale(1.05);
+    background-color: #0d2a6b;
+}
+
+/* ===== CONTAINER SECUNDÁRIO ===== */
 .container_secundaria {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 500px;
-    /* não estoura em telas menores */
     width: 100%;
-    padding-left: 45px;
+    padding: 0 20px;
 }
 
-/* Cartão do instituto */
 .card_instituto {
     background-color: #275BD5;
     padding: .6rem .9rem;
@@ -251,9 +240,57 @@ header img:nth-child(3):hover {
     font-size: 20pt;
     margin-top: 1rem;
     text-align: center;
+    width: 100%;
 }
 
-/* Cartões de andares */
+.card_interno h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Redes sociais */
+.imagens {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.redesSociais {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.redesSociais a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.redesSociais a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.redesSociais a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.redesSociais a:nth-child(1) { background-color: #1877f2; } /* Facebook */
+.redesSociais a:nth-child(2) { background-color: #e1306c; } /* Instagram */
+.redesSociais a:nth-child(3) { background-color: #000000; } /* TikTok */
+.redesSociais a:nth-child(4) { background-color: #0077b5; } /* LinkedIn */
+.redesSociais a:nth-child(5) { background-color: #ff0000; } /* YouTube */
+
 .cards_andares {
     background-color: #FFE8BD;
     width: 100%;
@@ -267,160 +304,34 @@ header img:nth-child(3):hover {
     font-weight: lighter;
     color: #10338D;
     margin-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
-/* Redes sociais */
-.redesSociais {
+/* Posters dos andares */
+.andares_fotos {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
+    position: relative;
 }
 
-.redesSociais a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    /* ícones circulares */
-    transition: transform 0.3s, box-shadow 0.3s;
-    /* animação hover */
-}
-
-.redesSociais a img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
-    /* deixa ícone branco */
-}
-
-.redesSociais a:hover {
-    transform: scale(1.2);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    /* sombra ao passar mouse */
-}
-
-/* Cores específicas para cada rede social */
-.redesSociais a:nth-child(1) {
-    background-color: #1877f2;
-}
-
-/* Facebook */
-.redesSociais a:nth-child(2) {
-    background-color: #e1306c;
-}
-
-/* Instagram */
-.redesSociais a:nth-child(3) {
-    background-color: #000000;
-}
-
-/* TikTok */
-.redesSociais a:nth-child(4) {
-    background-color: #0077b5;
-}
-
-/* LinkedIn */
-.redesSociais a:nth-child(5) {
-    background-color: #ff0000;
-}
-
-/* YouTube */
-
-/* Títulos secundários */
-.container_secundaria h3 {
+.andares_fotos h3 {
     font-size: 2rem;
     color: #275BD5;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
+    text-align: center;
 }
-
-/* Links adicionais */
-.Link2,
-.Link3 {
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 48px;
-}
-
-.Link2 {
-    background-color: #275BD5;
-    color: white;
-}
-
-.Link3 {
-    background-color: white;
-    color: #10338D;
-}
-
-/* Container de links */
-.links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-/* Container das escolhas */
-.escolhas {
-    display: flex;
-    justify-content: center;
-    /* centraliza horizontalmente */
-    margin-top: 2rem;
-}
-
-.escolhas nav ul {
-    list-style: none;
-    /* remove bullets */
-    display: flex;
-    gap: 1.5rem;
-    /* espaço entre os itens */
-    padding: 0;
-    margin: 0;
-}
-
-.escolhas nav ul li {
-    padding: 0.6rem 1.2rem;
-    /* espaço interno */
-    border-radius: 40px;
-    /* mesma estética arredondada dos botões */
-    border: 2px solid #0b3baa;
-    /* contorno azul igual aos botões */
-    font-weight: 900;
-    color: rgb(0, 17, 73);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Efeito hover igual ao dos botões */
-.escolhas nav ul li:hover {
-    background-color: #0f48cc;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-/* Estado ativo opcional */
-.escolhas nav ul li.active {
-    background-color: #f1f1f1;
-    color: #fff;
-}
-
-/* Posters */
 
 .andares_fotos img {
-    height: 570px;
+    height: 300px;
     border-radius: 20px;
     cursor: pointer;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* imagem escondida inicialmente */
 .andares_hidden {
     position: fixed;
     top: 50%;
@@ -429,24 +340,94 @@ header img:nth-child(3):hover {
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 999;
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
 }
-
-/* quando passar o mouse em .andares_fotos */
-/*.andares_fotos:active .andares_hidden {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1; 
-}*/
 
 .andares_hidden.visible {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
 
-/* Opacidade do container home */
-.container_home.dim {
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-    
+/* Links adicionais */
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.Link2, .Link3 {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 48px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.Link2 {
+    background-color: #275BD5;
+    color: white;
+}
+
+.Link2:hover {
+    background-color: #1a4bb8;
+}
+
+.Link3 {
+    background-color: white;
+    color: #10338D;
+}
+
+.Link3:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navegação de escolhas */
+.escolhas {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.escolhas nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.escolhas nav ul li {
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    border: 2px solid #0b3baa;
+    font-weight: 900;
+    color: rgb(0, 17, 73);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.escolhas nav ul li:hover {
+    background-color: #0f48cc;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.escolhas nav ul li.active {
+    background-color: #0b3baa;
+    color: #fff;
 }
 
 .overlay {
@@ -455,7 +436,7 @@ header img:nth-child(3):hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /* preto com transparência */
+    background-color: rgba(0,0,0,0.7);
     z-index: 998;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -465,4 +446,226 @@ header img:nth-child(3):hover {
 .overlay.visible {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header img:first-child {
+        height: 60px;
+    }
+
+    header img:last-child {
+        height: 35px;
+    }
+
+    .container_main {
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    .regressiva {
+        font-size: 2.5rem;
+    }
+
+    .andares_fotos img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    header img:first-child {
+        height: 50px;
+        order: 1;
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    header img:last-child {
+        height: 35px;
+        order: 3;
+        position: static;
+        margin: 0;
+    }
+    
+    .navegar {
+        order: 2;
+        width: auto;
+        margin: 0;
+        position: static;
+        justify-content: center;
+    }
+
+    .container_main {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
+
+    .feira {
+        width: 90%;
+        height: auto;
+        min-height: 180px;
+        margin: 20px auto;
+    }
+
+    .botoes {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .regressiva {
+        font-size: 2rem;
+    }
+
+    .paranossafeira {
+        font-size: 1.5rem;
+    }
+
+    .escolhas nav ul {
+        flex-direction: row;
+        gap: 0.8rem;
+    }
+    
+    .escolhas nav ul li {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .andares_fotos img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+    
+    .container_secundaria {
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        position: fixed;
+        padding: 10px 5px;
+        flex-direction: row;
+    }
+    
+    header img:first-child {
+        height: 40px;
+    }
+    
+    header img:last-child {
+        height: 30px;
+    }
+    
+    .navegar {
+        width: 26%;
+        margin-top: 0.4rem;
+        margin-right: 5%;
+    }
+    
+    .link, .link1 {
+        padding: 8px 15px;
+        font-size: 0.7rem;
+        border-radius: 30px;
+        width: 70%;
+        text-align: center;
+    }
+    
+    .link {
+        border-radius: 30px 0 0 30px;
+    }
+    
+    .link1 {
+        border-radius: 0 30px 30px 0;
+    }
+
+    .container_home {
+        background-position: top;
+    }
+
+    .feira {
+    max-width: 100%;   
+    padding: 8px;      
+    margin: 15px auto;
+  }
+
+    .regressiva {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+    }
+
+    .informacoes > .andares {
+        font-size: 16px;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .cards_andares {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .cards_andares h2 {
+        font-size: 1.2rem;
+    }
+
+    .redesSociais {
+        gap: 10px;
+    }
+
+    .redesSociais a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .redesSociais a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .Link2, .Link3 {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .container_secundaria {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0;
+    }
+    
+    .andares_fotos h3 {
+        font-size: 1.5rem;
+    }
+    
+    .escolhas nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .escolhas nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .card_interno h1 {
+        font-size: 1.5rem;
+    }
 }

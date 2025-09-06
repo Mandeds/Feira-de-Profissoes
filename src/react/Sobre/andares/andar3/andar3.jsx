@@ -22,10 +22,9 @@ export default function andar3() {
                     <div className="informacoes-andar3">
                         <img src="src/assets/images/image-removebg-preview 2.png" alt="" />
                         <div className="texto">
-                        <h1>SALAS</h1>
-                        <h2>• Sala ?: Auditório</h2>
-                        <h2>• Sala ?: Simulação de Entrevista de Emprego</h2>
-                        <h2>• Sala ?: Oficina de Linkedin</h2>
+                        <h1>Auditório</h1>
+                        <h2>• Simulação de Entrevista de Emprego</h2>
+                        <h2>• Oficina de Linkedin</h2>
                         </div>
                     </div>
 
