@@ -141,8 +141,8 @@ header img:nth-child(3):hover {
 /* Botões */
 .botoes button {
     border-radius: 40px;
-    height: 3rem;
-    width: 7rem;
+    height: 5rem;
+    width: 15rem;
     color: #0b3baa;
     background-color: #fff;
     /* fundo branco */
@@ -165,6 +165,7 @@ header img:nth-child(3):hover {
     /* herda a cor do botão */
     width: 100%;
     height: 100%;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -385,6 +386,7 @@ header img:nth-child(3):hover {
 }
 
 .escolhas nav ul li {
+    font-size: 30px;
     padding: 0.6rem 1.2rem;
     /* espaço interno */
     border-radius: 40px;
@@ -392,7 +394,7 @@ header img:nth-child(3):hover {
     border: 2px solid #0b3baa;
     /* contorno azul igual aos botões */
     font-weight: 900;
-    color: rgb(0, 17, 73);
+    color: rgb(255, 255, 255);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -448,4 +450,337 @@ header img:nth-child(3):hover {
     /* aparece */
 
 
+}
+
+.Mini-Footer {
+    background-color: rgb(215, 215, 215);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Mini-Footer > .logo2feira > img {
+    height: 300px;
+    margin-top: 5vh;
+}
+
+.Mini-Footer {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    text-align: center;      /* centraliza o texto dentro do h1 */
+    padding: 40px 20px;      /* dá espaço ao redor */
+    background-color: #f5f5f5; /* opcional: fundo para ver melhor */
+}
+
+.Mini-Footer h1 {
+    color: #10338D;
+    font-size: 80px;
+    line-height: 1.2;       /* deixa o espaçamento entre linhas adequado */
+    margin: 0;              /* remove margens padrão */
+}
+
+.Mini-Footer h3 {
+    color: #10338D;
+    font-size: 60px;
+    padding-top: 5vh;
+}
+
+.sobre_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 8vw 5%; /* padding relativo ao width da tela */
+    background-color: #f9f9f9;
+    gap: 3vw; /* espaçamento proporcional */
+    width: 100%;
+}
+
+.sobre_home h1 {
+    color: #10338D;
+    font-size: 5vw; /* tamanho relativo à largura da tela */
+    margin-bottom: 1.5vw;
+    font-weight: 700;
+}
+
+.sobre_home p {
+    color: #333;
+    font-size: 1.5vw; /* proporcional à tela */
+    line-height: 1.8;
+    max-width: 80%; /* ocupa 80% do container */
+    margin: 0 auto;
+}
+
+.sobre_home img {
+    width: 20vw; /* proporcional à tela */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.img_antiga_feira {
+    display: flex;
+    flex-direction: column; /* coluna: cada div uma abaixo da outra */
+    align-items: center; /* centraliza as colunas horizontalmente */
+    gap: 30px; /* espaço entre as divs/colunas */
+    padding: 20px;
+}
+
+.img_antiga_feira > div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 imagens por linha */
+    gap: 10px; /* espaço entre imagens */
+}
+
+.img_antiga_feira img {
+    width: 100%; /* ocupa todo o espaço da célula do grid */
+    height: auto; /* mantém proporção da imagem */
+    border-radius: 8px; /* cantos arredondados */
+    transition: transform 0.3s ease; /* transição suave para o hover */
+    cursor: pointer; /* muda o cursor ao passar o mouse */
+}
+
+.img_antiga_feira img:hover {
+    transform: scale(1.1); /* efeito de zoom */
+    filter: brightness(1.4);
+}
+
+.img_antiga_feira h1 {
+    font-size: 50px;
+    color: #10338D;
+    background-color: white;
+    border-radius: 80px;
+    padding: 30px;
+}
+
+.patrocinadores {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.patrocinadores h1 {
+  font-size: 2rem;
+  color: #10338D;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  animation: scroll 20s linear infinite; /* movimento automático */
+}
+
+.carousel-track img {
+  height: 100px; /* altura fixa para padronizar */
+  width: auto;   /* mantém proporção */
+  object-fit: contain;
+  filter: grayscale(20%); /* leve estilização opcional */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.parceiros {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.parceiros h1 {
+  font-size: 2rem;
+  color: #10338D;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  height: 100px;
+  width: auto;
+  margin: 0 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* botões */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.carousel button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+.footer {
+  background-color: #1f4287; // azul do fundo
+  color: #fff;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15vh;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-column {
+    flex: 1 1 200px;
+
+    h3 {
+      margin-bottom: 10px;
+      position: relative;
+      font-size: 1.1rem;
+      &::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #e05a2b;
+        margin-top: 5px;
+      }
+    }
+
+    p, li, a {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .logo-column {
+    max-width: 250px;
+
+    .footer-logo {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+.contatos_home {
+  background-color: #EAF3FE; /* fundo azul clarinho */
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.contatos_home .contatos-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contatos_home .mapa {
+  flex: 1 1 500px; /* cresce e respeita tamanho mínimo */
+  min-width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contatos_home .mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contatos_home .contatos-info {
+  flex: 1 1 300px;
+  min-width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contatos_home .contatos-info h1 {
+  color: #034f84;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.contatos_home .contatos-info p {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.contatos_home .contatos-info p strong {
+  color: #034f84;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-top: 20px;
+  padding-right: 10vh;
 }
