@@ -56,7 +56,8 @@ export default function Cadastro() {
   }
 
   return (
-    <div className="container_cadastro">
+    <div className="container-cadastro">
+      
       <header>
         <Link className="Link" to="/">
           <h1>Voltar</h1>
@@ -66,6 +67,12 @@ export default function Cadastro() {
         </div>
         <img src="src/assets/images/user2.png" alt="Usuário" />
       </header>
+
+      <div className="bubbles">
+        {[...Array(15)].map((_, i) => (
+          <div key={i} className="bubble"></div>
+        ))}
+      </div>
 
       <div className="cadastro">
         <div className="box1">
@@ -82,8 +89,9 @@ export default function Cadastro() {
         <div className="box">
           <h2>Email:</h2>
           <input
+          className="emailInput"
             type="email"
-            placeholder="pedroalberto@gmail.com"
+            placeholder="pedroalber@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -104,6 +112,7 @@ export default function Cadastro() {
           <h2>CPF:</h2>
           <input
             type="text"
+            className="CPF"
             placeholder="546.725.667-10"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
@@ -136,20 +145,23 @@ export default function Cadastro() {
           <div className="Ex">
             <h3>
               Ex-Aluno?
+            </h3>
               <input
+                className="checkbox"
                 type="checkbox"
                 checked={exAluno}
                 onChange={(e) => setExAluno(e.target.checked)}
               />{" "}
-              Sim
-            </h3>
+
+              <h3>Sim</h3>
+            
           </div>
         </div>
 
         <div className="datehappybirthday">
           <h3>Data de Nasc.</h3>
           <input
-            type="date"
+            type="date" 
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
@@ -165,7 +177,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <button onClick={EnviarDados}>Enviar Cadastro</button>
+        <button className="btao_cadastro" onClick={EnviarDados}>Enviar Cadastro</button>
       </div>
     </div>
   );
