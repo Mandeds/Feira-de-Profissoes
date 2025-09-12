@@ -21,19 +21,25 @@ html {
 
 /* Container principal da home */
 .container_home {
-    min-height: 100vh; /* altura mínima = tela toda */
+    min-height: 100vh; 
     width: 100%;
     overflow-x: hidden;
 
+    display: flex; /* habilita o flex */
+    justify-content: center; /* centraliza horizontal */
+    align-items: center; /* centraliza vertical */
+    flex-direction: column; /* mantém em coluna (um abaixo do outro) */
+
     background: 
         linear-gradient(
-            rgba(18, 54, 142, 0.7) 50%,   /* azul com opacidade */
-            rgba(247, 183, 59, 0.7)       /* amarelo com opacidade */
+            rgba(18, 54, 142, 0.7) 50%,   
+            rgba(247, 183, 59, 0.7)       
         ),
         url(/src/assets/images/background.png);
     background-size: cover;
     background-position: center;
 }
+
 
 /* Header da página */
 header {
@@ -783,4 +789,198 @@ header img:nth-child(3):hover {
   align-items: end;
   margin-top: 20px;
   padding-right: 10vh;
+}
+
+/* Telas até tablets */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+  }
+
+  header img:nth-child(1) {
+    height: 55px;
+  }
+
+  header img:nth-child(3) {
+    height: 30px;
+  }
+
+  .navegar {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .container_main {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0 10px;
+  }
+
+  .feira {
+    width: 90%;
+    max-height: 250px;
+    margin: 0 auto;
+  }
+
+  .botoes {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .botoes button {
+    width: 120%;
+    height: 50px;
+  }
+
+  .horario {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .regressiva {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .andares_fotos img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .img_antiga_feira .img1,
+  .img_antiga_feira .img2,
+  .img_antiga_feira .img3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .img_antiga_feira{
+    h1{
+      margin-right: 85%;
+      font-size: 0.8rem;
+    }
+  }
+
+  .img_antiga_feira img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .carousel-track img {
+    height: 60px;
+  }
+
+  .contatos-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .mapa {
+    width: 100%;
+    height: 200px;
+  }
+
+  .contatos-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  
+
+  
+}
+
+/* Telas até celular pequeno */
+@media (max-width: 480px) {
+  .link, .link1 {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .botoes button a {
+    font-size: 15px;
+  }
+
+  .Mini-Footer h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .Mini-Footer h3 {
+    font-size: 20px;
+  }
+
+  .sobre_home h1 {
+    font-size: 8vw;
+    text-align: center;
+  }
+
+  .sobre_home p {
+    font-size: 4vw;
+    text-align: justify;
+  }
+
+  .sobre_home img {
+    width: 60vw;
+    margin: 0 auto;
+  }
+
+  .img_antiga_feira .img1,
+  .img_antiga_feira .img2,
+  .img_antiga_feira .img3 {
+    grid-template-columns: 350px 4fr;
+    max-width: 20%;
+    height: 5%;
+    margin-right: 70%;
+  }
+
+  .container_secundaria{
+    .card_instituto{
+      margin-right: 12%;
+      font-size: 1.2rem;
+    }
+    .imagens{
+      margin-right: 12%;
+    }
+    .cards_andares{
+      margin-right: 12%;
+    }
+    
+  }
+
+  .escolhas{
+    nav{
+      ul{
+        flex-direction: column;
+      }
+    }
+  }
+
+  .redesSociais a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .redesSociais img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer{
+    margin-bottom: 0;
+  }
 }

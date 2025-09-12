@@ -221,11 +221,11 @@ export default function Home() {
                     </div>
                     <div className="imagens">
                         <div className="redesSociais">
-                            <a href="https://www.facebook.com/institutonsfatima/?locale=pt_BR"><img src="/src/assets/images/facebook (1).png" alt="" /></a>
-                            <a href="https://www.instagram.com/institutonsfatima/"><img src="/src/assets/images/instagram (1).png" alt="" /></a>
-                            <a href="https://www.tiktok.com/@institutonsfatima_?is_from_webapp=1&sender_device=pc"><img src="/src/assets/images/tik-tok.png" alt="" /></a>
-                            <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHo6NBiSWxmwgAAAZjMiYuY8UAuenq4Wu_PrYbf3TkLMyt9WUKsyz8mc7hK25at1IsWASK8zNXHXdQsGL-8MGEWfk5XzxfQYkpwKKH5uUF7I2XpsWpDaZJl4uPJPHqRFxa6kEM=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Finstitutonsfatima"><img src="/src/assets/images/linkedin (1).png" alt="" /></a>
-                            <a href="https://www.youtube.com/@institutosocialnossasenhor3548/videos"><img src="/src/assets/images/youtube.png" alt="" /></a>
+                            <a href="https://www.facebook.com/institutonsfatima/?locale=pt_BR" target="_blank"><img src="/src/assets/images/facebook (1).png" alt="" /></a>
+                            <a href="https://www.instagram.com/institutonsfatima/" target="_blank"><img src="/src/assets/images/instagram (1).png" alt="" /></a>
+                            <a href="https://www.tiktok.com/@institutonsfatima_?is_from_webapp=1&sender_device=pc" target="_blank"><img src="/src/assets/images/tik-tok.png" alt="" /></a>
+                            <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHo6NBiSWxmwgAAAZjMiYuY8UAuenq4Wu_PrYbf3TkLMyt9WUKsyz8mc7hK25at1IsWASK8zNXHXdQsGL-8MGEWfk5XzxfQYkpwKKH5uUF7I2XpsWpDaZJl4uPJPHqRFxa6kEM=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Finstitutonsfatima" target="_blank"><img src="/src/assets/images/linkedin (1).png" alt="" /></a>
+                            <a href="https://www.youtube.com/@institutosocialnossasenhor3548/videos" target="_blank"><img src="/src/assets/images/youtube.png" alt="" /></a>
                         </div>
                     </div>
                     <div className="cards_andares">
@@ -274,7 +274,7 @@ export default function Home() {
 
                     <h1>VAMOS REVER OS MELHORES MOMENTOS DA FEIRA DE 2024?</h1>
 
-                    <div className="1img">
+                    <div className="img1">
                         <img src="\src\assets\images\fotosDa4feira\IMG_4867.JPG" alt="" />
                     <img src="\src\assets\images\fotosDa4feira\FEI_2024_CEDESP15.jpeg" alt="" />
                     <img src="\src\assets\images\fotosDa4feira\IMG_4854.jpg" alt="" />
@@ -282,7 +282,7 @@ export default function Home() {
                     <img src="\src\assets\images\fotosDa4feira\IMG_4761.jpg" alt="" />
                     </div>
 
-                    <div className="2img">
+                    <div className="img2">
                         <img src="\src\assets\images\fotosDa4feira\IMG_4757.JPG" alt="" />
                     <img src="\src\assets\images\fotosDa4feira\IMG_4735.JPG" alt="" />
                     <img src="\src\assets\images\fotosDa4feira\FEI_2024_CEDESP69.jpeg" alt="" />
@@ -290,7 +290,7 @@ export default function Home() {
                     <img src="\src\assets\images\fotosDa4feira\FEI_2024_CEDESP16.jpeg" alt="" />
                     </div>
 
-                    <div className="3img">
+                    <div className="img3">
                         <img src="\src\assets\images\fotosDa4feira\FEI_2024_CEDESP61.jpeg" alt="" />
                     <img src="\src\assets\images\fotosDa4feira\FEI_2024_CEDESP53.jpeg" alt="" />
                     <img src="\src\assets\images\fotosDa4feira\FEI_2024_CEDESP39.jpeg" alt="" />
@@ -300,11 +300,11 @@ export default function Home() {
 
                 </section>
 
-                    <section class="patrocinadores">
+                    <section className="patrocinadores">
                         <h1>PATROCINADORES</h1>
 
-                            <div class="carousel">
-                                <div class="carousel-track">
+                            <div className="carousel">
+                                <div className="carousel-track">
                                 <img src="\src\assets\images\patrocinadores\image copy 2.png" alt="Patrocinador" />
                                 <img src="\src\assets\images\patrocinadores\image copy 3.png" alt="Patrocinador" />
                                 <img src="\src\assets\images\patrocinadores\image copy 4.png" alt="Patrocinador" />
@@ -364,16 +364,16 @@ export default function Home() {
                     </div>
                     </section>
 
-                    <footer class="footer">
-                    <div class="footer-container">
-                        <div class="footer-column logo-column">
+                    <footer className="footer">
+                    <div className="footer-container">
+                        <div className="footer-column logo-column">
                             <img src="\src\assets\images\image-removebg-preview 2.png" alt="" height={80}/>
                         <p>
                             Descubra seu <strong>futuro</strong> na Feira das Profissões 2025 — conecte-se com o <strong>mercado</strong> e encontre o caminho ideal para sua carreira!
                         </p>
                         </div>
 
-                        <div class="footer-column">
+                        <div className="footer-column">
                         <h3>Horários e Endereço</h3>
                         <p><strong>29 de Setembro das 9h às 14h</strong></p>
                         <p>Instituto Social Nossa Senhora de Fátima</p>
@@ -382,7 +382,7 @@ export default function Home() {
                         <p>04773-000</p>
                         </div>
 
-                        <div class="footer-column">
+                        <div className="footer-column">
                         <h3>Links Rápidos</h3>
                         <ul>
                             <li><a href="#">Início</a></li>
@@ -391,7 +391,7 @@ export default function Home() {
                         </ul>
                         </div>
 
-                        <div class="footer-column">
+                        <div className="footer-column">
                         <h3>Contato</h3>
                         <p>Instagram: @institutonsfatima</p>
                         <p>WhatsApp: (11) 96398-6252</p>
