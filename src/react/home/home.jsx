@@ -352,7 +352,7 @@ export default function Home() {
 
                         <div className="contatos-info">
                         <h1>Contatos</h1>
-                        <p><strong>Instagram:</strong> @institutonsfatima</p>
+                        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/institutonsfatima/" target="_blank">@institutonsfatima </a></p> 
                         <p><strong>WhatsApp:</strong> (11) 96398-6252</p>
                         <p><strong>Secretaria:</strong> (11) 3798-5037</p>
 
@@ -386,14 +386,14 @@ export default function Home() {
                         <h3>Links Rápidos</h3>
                         <ul>
                             <li><a href="#">Início</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#" onClick={scrollToSobre}>Sobre</a></li>
+                            <li><a href="#" onClick={scrollToContatos}>Contato</a></li>
                         </ul>
                         </div>
 
                         <div className="footer-column">
                         <h3>Contato</h3>
-                        <p>Instagram: @institutonsfatima</p>
+                        <p>Instagram: <a href="https://www.instagram.com/institutonsfatima/" target="_blank">institutonsfatima</a></p>
                         <p>WhatsApp: (11) 96398-6252</p>
                         <p>Secretaria: (11) 3798-5037</p>
                         </div>
